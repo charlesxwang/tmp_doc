@@ -1,0 +1,23 @@
+.. _lbl-testbed_AC_hazard_characterization:
+
+***********************
+Hazard Characterization
+***********************
+
+This testbed considers the wind hazard and its affect on the building inventory.
+
+As the initial implementation of the regional assessment workflow, the testbed mainly
+adapted the HAZUS Hurricane Damage and Loss Assessment methodology to quantify the
+hazard the intensity measure Peak Wind Speed (PWS), which refers to maximum wind speed average over a 3-second gust and measured at 10m height
+and under the open terrain surface condition (equivalent to the Exposure C in ASCE 7-16).
+
+
+.. figure:: figures/Hurricane_Laura_WindField_Release_1.png
+   :name: pws
+   :align: center
+   :figclass: align-center
+   :figwidth: 100%
+
+   Peak wind speed (3s-gust) by ARA
+
+

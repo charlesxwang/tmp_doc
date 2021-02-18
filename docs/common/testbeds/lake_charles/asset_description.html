@@ -1,0 +1,3045 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>4.2. Asset Description &mdash; Regional Resilience Determination Tool  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4.3. Hazard Characterization" href="hazard_characterization.html" />
+    <link rel="prev" title="4.1. Overview" href="overview.html" />
+<script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
+<style media="screen">.vega-actions a {margin-right: 5px;}</style>
+<link href="../../../_static/css/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F2F2F2" >
+          
+<a href="https://simcenter.designsafe-ci.org/" style="margin-bottom: 0px;">
+  <img src="../../../_static/img/SimCenter-Only.png" class="logo" alt="Org-Logo" />
+</a>
+<hr style="margin: 0px;">
+
+  <a href="../../../index.html">
+
+
+
+  
+  <img src="../../../_static/RDT-Logo-grey3.png" class="logo" alt="Logo"/>
+
+</a>
+
+
+  
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/ack.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/license.html">Copyright and License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/abbreviations.html">Abbreviations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/installation/desktop/installation.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/usage/desktop/usage.html">2. User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/troubleshooting/desktop/troubleshooting.html">3. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/examples/desktop/examples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/bugs.html">5. Bugs &amp; Feature Requests</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Testbeds</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sf_bay_area/index.html">1. San Francisco, CA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlantic_city/index.html">2. Atlantic City, NJ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../memphis/index.html">3. Memphis, TN</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Lake Charles, LA</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">4.1. Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. Asset Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#testbed-building-inventory">4.2.1. Testbed Building Inventory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-method-of-building-inventory">4.2.2. Processing Method of Building Inventory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#phase-i-attribute-definition">Phase I: Attribute Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-ii-building-footprint">Phase II: Building Footprint</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phase-iii-augmentation-using-image-processing">Phase III: Augmentation Using Image Processing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hazard_characterization.html">4.3. Hazard Characterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_representation.html">4.4. Asset Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="response_simulation.html">4.5. Response Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="damage_and_loss.html">4.6. Damage and Loss Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainty_quantification.html">4.7. Uncertainty Quantification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_results.html">4.8. Sample Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_refinements.html">4.9. Opportunity Areas for Future Refinements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Technical Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../technical_manual/desktop/technical_manual.html">1. Technical Manual</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/how_to_build/desktop/how_to_build.html">1. How to Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/architecture/desktop/architecture.html">2. Software Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/how_to_extend/desktop/how_to_extend.html">3. How to Extend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/verification/desktop/verification.html">4. Verification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/coding_style/desktop/coding_style.html">5. Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/examples/desktop/examples.html">6. Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Regional Resilience Determination Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">4. </span>Lake Charles, LA</a> &raquo;</li>
+        
+      <li><span class="section-number">4.2. </span>Asset Description</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/common/testbeds/lake_charles/asset_description.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="asset-description">
+<span id="lbl-testbed-ac-asset-description"></span><h1><span class="section-number">4.2. </span>Asset Description<a class="headerlink" href="#asset-description" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="testbed-building-inventory">
+<h2><span class="section-number">4.2.1. </span>Testbed Building Inventory<a class="headerlink" href="#testbed-building-inventory" title="Permalink to this headline">¶</a></h2>
+<p>This testbed includes 54,456 assets in the city of Lake Charles.</p>
+<div class="align-center figure" id="footprints-building-lc" style="width: 90%">
+<img alt="../../../_images/footprints_lc.png" src="../../../_images/footprints_lc.png" />
+<p class="caption"><span class="caption-number">Fig. 4.2.1 </span><span class="caption-text">Building footprints from <a class="reference external" href="https://github.com/microsoft/USBuildingFootprints">Microsoft</a></span><a class="headerlink" href="#footprints-building-lc" title="Permalink to this image">¶</a></p>
+</div>
+<p>The example
+building inventory of these assets are shown in <a class="reference internal" href="#bldg-inv-lc"><span class="std std-numref">Table 4.2.1</span></a>.</p>
+<table class="docutils align-center" id="bldg-inv-lc">
+<caption><span class="caption-number">Table 4.2.1 </span><span class="caption-text">Example building inventory</span><a class="headerlink" href="#bldg-inv-lc" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>RoofShape</p></th>
+<th class="head"><p>FloodZone</p></th>
+<th class="head"><p>Area</p></th>
+<th class="head"><p>Longitude</p></th>
+<th class="head"><p>Latitude</p></th>
+<th class="head"><p>Terrain</p></th>
+<th class="head"><p>DSWII</p></th>
+<th class="head"><p>geometry</p></th>
+<th class="head"><p>BuildingType</p></th>
+<th class="head"><p>OccupancyClass</p></th>
+<th class="head"><p>AvgJanTemp</p></th>
+<th class="head"><p>Garage</p></th>
+<th class="head"><p>NumberofStories</p></th>
+<th class="head"><p>MeanRoofHt</p></th>
+<th class="head"><p>RoofSlope</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>156.8466805</p></td>
+<td><p>-93.25798</p></td>
+<td><p>30.37664</p></td>
+<td><p>21</p></td>
+<td><p>125.1241884</p></td>
+<td><p>POLYGON ((-93.257869 30.376667, -93.257901 30.376709, -93.258082 30.376602, -93.25805 30.376561, -93.257869 30.376667))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>1.159552194</p></td>
+<td><p>0.941643781</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>162.1119816</p></td>
+<td><p>-93.18893</p></td>
+<td><p>30.3772</p></td>
+<td><p>21</p></td>
+<td><p>125.1016267</p></td>
+<td><p>POLYGON ((-93.188902 30.3773, -93.188956 30.3773, -93.188956 30.377091, -93.188902 30.377091, -93.188902 30.3773))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>29.74986909</p></td>
+<td><p>0.332948459</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>285.6901294</p></td>
+<td><p>-93.1782</p></td>
+<td><p>30.38865</p></td>
+<td><p>21</p></td>
+<td><p>124.7260237</p></td>
+<td><p>POLYGON ((-93.178192 30.388664, -93.178342 30.388664, -93.178342 30.388605, -93.17808100000001 30.388604, -93.17808100000001 30.388654, -93.178111 30.388654, -93.178111 30.388721, -93.178192 30.388722, -93.178192 30.388664))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>1.789841119</p></td>
+<td><p>0.961416065</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>197.5443655</p></td>
+<td><p>-93.16707</p></td>
+<td><p>30.38964</p></td>
+<td><p>21</p></td>
+<td><p>124.6978514</p></td>
+<td><p>POLYGON ((-93.167107 30.389533, -93.16704799999999 30.389533, -93.16704799999999 30.389646, -93.16701 30.389646, -93.16701 30.389702, -93.16704799999999 30.389702, -93.16704799999999 30.38973, -93.167107 30.38973, -93.167107 30.389533))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>31.4021709</p></td>
+<td><p>0.601549493</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>169.3672226</p></td>
+<td><p>-93.25718</p></td>
+<td><p>30.36973</p></td>
+<td><p>21</p></td>
+<td><p>125.3563246</p></td>
+<td><p>POLYGON ((-93.25711099999999 30.369772, -93.257245 30.369772, -93.257245 30.369684, -93.25711099999999 30.369684, -93.25711099999999 30.369772))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>24.20995607</p></td>
+<td><p>0.839538348</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>643.8772203</p></td>
+<td><p>-93.2568</p></td>
+<td><p>30.37238</p></td>
+<td><p>43</p></td>
+<td><p>125.2667574</p></td>
+<td><p>POLYGON ((-93.25689199999999 30.372269, -93.25669499999999 30.372273, -93.256702 30.372501, -93.25689800000001 30.372497, -93.25689199999999 30.372269))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>34.72963017</p></td>
+<td><p>0.524525885</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>182.6474268</p></td>
+<td><p>-93.27433</p></td>
+<td><p>30.35142</p></td>
+<td><p>21</p></td>
+<td><p>125.9835283</p></td>
+<td><p>POLYGON ((-93.27440900000001 30.351377, -93.274248 30.351377, -93.274248 30.351456, -93.27440900000001 30.351456, -93.27440900000001 30.351377))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>31.99467307</p></td>
+<td><p>0.476257565</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>274.4692903</p></td>
+<td><p>-93.27549</p></td>
+<td><p>30.33703</p></td>
+<td><p>11</p></td>
+<td><p>126.473767</p></td>
+<td><p>POLYGON ((-93.27554600000001 30.336945, -93.27542800000001 30.336945, -93.27542800000001 30.337107, -93.27554600000001 30.337107, -93.27554600000001 30.336945))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>27.7081884</p></td>
+<td><p>0.594138014</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>279.9875694</p></td>
+<td><p>-93.27528</p></td>
+<td><p>30.33869</p></td>
+<td><p>11</p></td>
+<td><p>126.416803</p></td>
+<td><p>POLYGON ((-93.27519700000001 30.338632, -93.27519700000001 30.338757, -93.275353 30.338757, -93.275353 30.338632, -93.27519700000001 30.338632))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>16.18948521</p></td>
+<td><p>0.732931692</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Flat</p></td>
+<td><p>A</p></td>
+<td><p>220.8121719</p></td>
+<td><p>-93.25931</p></td>
+<td><p>30.35253</p></td>
+<td><p>32</p></td>
+<td><p>125.9380529</p></td>
+<td><p>POLYGON ((-93.259322 30.352504, -93.259373 30.352504, -93.259373 30.352437, -93.259266 30.352436, -93.259265 30.352649, -93.259321 30.352649, -93.259322 30.352504))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>31.67422489</p></td>
+<td><p>0.368448181</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>125.937806</p></td>
+<td><p>-93.25241</p></td>
+<td><p>30.32818</p></td>
+<td><p>43</p></td>
+<td><p>126.7595965</p></td>
+<td><p>POLYGON ((-93.25235499999999 30.328222, -93.25245700000001 30.328222, -93.25245700000001 30.328136, -93.25235499999999 30.328136, -93.25235499999999 30.328222))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>24.2695829</p></td>
+<td><p>0.736634264</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>323.3946485</p></td>
+<td><p>-93.25775</p></td>
+<td><p>30.32838</p></td>
+<td><p>43</p></td>
+<td><p>126.7560807</p></td>
+<td><p>POLYGON ((-93.257687 30.328294, -93.25768600000001 30.328464, -93.257819 30.328465, -93.257819 30.328295, -93.257687 30.328294))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>32.60799618</p></td>
+<td><p>0.32514987</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>177.2889546</p></td>
+<td><p>-93.25472</p></td>
+<td><p>30.31853</p></td>
+<td><p>11</p></td>
+<td><p>127.0885965</p></td>
+<td><p>POLYGON ((-93.254598 30.318555, -93.254845 30.318555, -93.254845 30.318505, -93.254598 30.318505, -93.254598 30.318555))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>1.106402565</p></td>
+<td><p>0.640229058</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>451.5276628</p></td>
+<td><p>-93.25431</p></td>
+<td><p>30.31089</p></td>
+<td><p>21</p></td>
+<td><p>127.3477557</p></td>
+<td><p>POLYGON ((-93.254214 30.310796, -93.254214 30.310908, -93.254249 30.310908, -93.254249 30.310991, -93.254402 30.310991, -93.254402 30.310917, -93.254383 30.310917, -93.254383 30.310796, -93.254214 30.310796))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>15.78673053</p></td>
+<td><p>0.929497712</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>359.0032715</p></td>
+<td><p>-93.23262</p></td>
+<td><p>30.35679</p></td>
+<td><p>42</p></td>
+<td><p>125.78435</p></td>
+<td><p>POLYGON ((-93.232525 30.356771, -93.232527 30.356823, -93.23257 30.356822, -93.232572 30.356902, -93.23268 30.356899, -93.23267199999999 30.356683, -93.23257099999999 30.356685, -93.232573 30.35677, -93.232525 30.356771))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>6.615617686</p></td>
+<td><p>0.769900073</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>152.2368155</p></td>
+<td><p>-93.23865</p></td>
+<td><p>30.34495</p></td>
+<td><p>42</p></td>
+<td><p>126.1853395</p></td>
+<td><p>POLYGON ((-93.238617 30.345035, -93.238679 30.345035, -93.238679 30.344864, -93.238617 30.344864, -93.238617 30.345035))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>9.115982898</p></td>
+<td><p>0.608245741</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>160.4072232</p></td>
+<td><p>-93.24384</p></td>
+<td><p>30.33618</p></td>
+<td><p>21</p></td>
+<td><p>126.4838499</p></td>
+<td><p>POLYGON ((-93.243909 30.33622, -93.243909 30.336144, -93.243762 30.336144, -93.243762 30.33622, -93.243909 30.33622))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>16.34598047</p></td>
+<td><p>0.397054809</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>401.8210378</p></td>
+<td><p>-93.23489</p></td>
+<td><p>30.33942</p></td>
+<td><p>21</p></td>
+<td><p>126.3704941</p></td>
+<td><p>POLYGON ((-93.234792 30.339348, -93.234792 30.339493, -93.23498499999999 30.339493, -93.23498499999999 30.339348, -93.234792 30.339348))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>2.387825048</p></td>
+<td><p>0.493782871</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>492.0811113</p></td>
+<td><p>-93.22287</p></td>
+<td><p>30.3457</p></td>
+<td><p>11</p></td>
+<td><p>126.1547943</p></td>
+<td><p>POLYGON ((-93.222987 30.345558, -93.222911 30.345548, -93.22288399999999 30.345697, -93.22274299999999 30.345678, -93.222725 30.34578, -93.222942 30.345809, -93.222987 30.345558))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>15.11008775</p></td>
+<td><p>0.617123805</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>506.8872462</p></td>
+<td><p>-93.20834</p></td>
+<td><p>30.35157</p></td>
+<td><p>42</p></td>
+<td><p>125.9551358</p></td>
+<td><p>POLYGON ((-93.208224 30.351713, -93.208305 30.351713, -93.208305 30.351585, -93.208482 30.351586, -93.208482 30.351477, -93.208303 30.351477, -93.208303 30.351514, -93.208225 30.351514, -93.208224 30.351713))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>21.51514069</p></td>
+<td><p>0.093123081</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>602.4616562</p></td>
+<td><p>-93.22452</p></td>
+<td><p>30.34106</p></td>
+<td><p>43</p></td>
+<td><p>126.3115715</p></td>
+<td><p>POLYGON ((-93.22434 30.340987, -93.22434 30.341068, -93.22444400000001 30.341068, -93.22444400000001 30.341149, -93.22465099999999 30.341149, -93.22465099999999 30.340987, -93.22434 30.340987))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>22.60329069</p></td>
+<td><p>0.143219905</p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>481.4199078</p></td>
+<td><p>-93.22524</p></td>
+<td><p>30.34438</p></td>
+<td><p>21</p></td>
+<td><p>126.2001105</p></td>
+<td><p>POLYGON ((-93.22534400000001 30.344278, -93.225171 30.34428, -93.225172 30.344352, -93.225144 30.344352, -93.225146 30.344482, -93.225301 30.34448, -93.2253 30.344371, -93.225345 30.344371, -93.22534400000001 30.344278))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>4.466429225</p></td>
+<td><p>0.398960394</p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>312.1718908</p></td>
+<td><p>-93.19163</p></td>
+<td><p>30.37248</p></td>
+<td><p>21</p></td>
+<td><p>125.257556</p></td>
+<td><p>POLYGON ((-93.191587 30.372565, -93.19170800000001 30.372565, -93.19170800000001 30.372415, -93.191531 30.372415, -93.191531 30.372479, -93.191587 30.372479, -93.191587 30.372565))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>14.54139984</p></td>
+<td><p>0.706753072</p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>358.3739658</p></td>
+<td><p>-93.20125</p></td>
+<td><p>30.35554</p></td>
+<td><p>76</p></td>
+<td><p>125.8217936</p></td>
+<td><p>POLYGON ((-93.201144 30.355594, -93.20136100000001 30.355594, -93.20136100000001 30.355479, -93.201144 30.355479, -93.201144 30.355594))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>29.74726924</p></td>
+<td><p>0.506733578</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>158.6319078</p></td>
+<td><p>-93.20473</p></td>
+<td><p>30.35703</p></td>
+<td><p>76</p></td>
+<td><p>125.7720316</p></td>
+<td><p>POLYGON ((-93.204666 30.356988, -93.204666 30.357072, -93.204797 30.357072, -93.204798 30.356988, -93.204666 30.356988))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>26.06512651</p></td>
+<td><p>0.245292154</p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p>Hip</p></td>
+<td><p>A</p></td>
+<td><p>522.547677</p></td>
+<td><p>-93.17024</p></td>
+<td><p>30.35437</p></td>
+<td><p>21</p></td>
+<td><p>125.8629461</p></td>
+<td><p>POLYGON ((-93.170315 30.354283, -93.170136 30.354285, -93.17014 30.354484, -93.170231 30.354483, -93.17023 30.354425, -93.170366 30.354423, -93.17036400000001 30.354302, -93.170315 30.354302, -93.170315 30.354283))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>1.212324227</p></td>
+<td><p>0.07026975</p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>202.0685768</p></td>
+<td><p>-93.20476</p></td>
+<td><p>30.35092</p></td>
+<td><p>11</p></td>
+<td><p>125.9764684</p></td>
+<td><p>POLYGON ((-93.204633 30.35092, -93.204759 30.350922, -93.204758 30.35099, -93.20483299999999 30.350991, -93.204835 30.350878, -93.204634 30.350876, -93.204633 30.35092))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>1.934050335</p></td>
+<td><p>0.610398121</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>363.032947</p></td>
+<td><p>-93.20609</p></td>
+<td><p>30.35137</p></td>
+<td><p>21</p></td>
+<td><p>125.9615488</p></td>
+<td><p>POLYGON ((-93.206149 30.351472, -93.206152 30.351269, -93.206028 30.351267, -93.206024 30.35147, -93.206149 30.351472))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.48531756</p></td>
+<td><p>0.588787945</p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>330.0157267</p></td>
+<td><p>-93.20736</p></td>
+<td><p>30.3398</p></td>
+<td><p>21</p></td>
+<td><p>126.3497622</p></td>
+<td><p>POLYGON ((-93.20742799999999 30.339711, -93.207292 30.339711, -93.207292 30.33988, -93.20742799999999 30.33988, -93.20742799999999 30.339711))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>22.6170906</p></td>
+<td><p>0.22393508</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>431.0615888</p></td>
+<td><p>-93.23164</p></td>
+<td><p>30.33117</p></td>
+<td><p>43</p></td>
+<td><p>126.6476155</p></td>
+<td><p>POLYGON ((-93.23156400000001 30.331071, -93.23156299999999 30.331273, -93.231712 30.331273, -93.231713 30.331072, -93.23156400000001 30.331071))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.19205372</p></td>
+<td><p>0.891787285</p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>589.4844864</p></td>
+<td><p>-93.21148</p></td>
+<td><p>30.33322</p></td>
+<td><p>76</p></td>
+<td><p>126.5714048</p></td>
+<td><p>POLYGON ((-93.211671 30.333166, -93.211297 30.333164, -93.211296 30.333243, -93.211366 30.333243, -93.211366 30.333331, -93.21144099999999 30.333331, -93.21144099999999 30.333248, -93.211519 30.333248, -93.211519 30.333304, -93.211575 30.333304, -93.211575 30.333258, -93.211671 30.333258, -93.211671 30.333166))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>9.009032919</p></td>
+<td><p>0.81455929</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>175.9220073</p></td>
+<td><p>-93.22291</p></td>
+<td><p>30.31676</p></td>
+<td><p>43</p></td>
+<td><p>127.1303334</p></td>
+<td><p>POLYGON ((-93.222883 30.316863, -93.22293999999999 30.316863, -93.22293999999999 30.316648, -93.222883 30.316648, -93.222883 30.316863))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>3.406913679</p></td>
+<td><p>0.792162795</p></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>336.9071445</p></td>
+<td><p>-93.22968</p></td>
+<td><p>30.31874</p></td>
+<td><p>11</p></td>
+<td><p>127.0667476</p></td>
+<td><p>POLYGON ((-93.229793 30.318676, -93.229592 30.318676, -93.229592 30.318817, -93.229677 30.318817, -93.229677 30.318775, -93.229793 30.318775, -93.229793 30.318676))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>31.42905048</p></td>
+<td><p>0.71987215</p></td>
+</tr>
+<tr class="row-odd"><td><p>34</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>137.5113637</p></td>
+<td><p>-93.22629</p></td>
+<td><p>30.31936</p></td>
+<td><p>11</p></td>
+<td><p>127.0439139</p></td>
+<td><p>POLYGON ((-93.226221 30.319388, -93.226343 30.319413, -93.22636300000001 30.319338, -93.226241 30.319314, -93.226221 30.319388))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>21.2485081</p></td>
+<td><p>0.921579758</p></td>
+</tr>
+<tr class="row-even"><td><p>35</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>244.9367222</p></td>
+<td><p>-93.22032</p></td>
+<td><p>30.32062</p></td>
+<td><p>43</p></td>
+<td><p>126.9990109</p></td>
+<td><p>POLYGON ((-93.220429 30.320665, -93.220429 30.320577, -93.220185 30.320577, -93.220185 30.320623, -93.22029000000001 30.320623, -93.22029000000001 30.320665, -93.220429 30.320665))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>16.73404647</p></td>
+<td><p>0.638559209</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>263.5476936</p></td>
+<td><p>-93.22136</p></td>
+<td><p>30.32285</p></td>
+<td><p>43</p></td>
+<td><p>126.9242238</p></td>
+<td><p>POLYGON ((-93.22142700000001 30.322779, -93.22129 30.322779, -93.22129 30.322913, -93.22142700000001 30.322913, -93.22142700000001 30.322779))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>28.37876706</p></td>
+<td><p>0.364794565</p></td>
+</tr>
+<tr class="row-even"><td><p>37</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>273.2273103</p></td>
+<td><p>-93.22129</p></td>
+<td><p>30.32416</p></td>
+<td><p>43</p></td>
+<td><p>126.8799089</p></td>
+<td><p>POLYGON ((-93.221234 30.324068, -93.221234 30.324251, -93.221338 30.324251, -93.221338 30.324068, -93.221234 30.324068))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.09915094</p></td>
+<td><p>0.229966403</p></td>
+</tr>
+<tr class="row-odd"><td><p>38</p></td>
+<td><p>Hip</p></td>
+<td><p>AE</p></td>
+<td><p>155.1784127</p></td>
+<td><p>-93.21856</p></td>
+<td><p>30.32101</p></td>
+<td><p>43</p></td>
+<td><p>126.9850843</p></td>
+<td><p>POLYGON ((-93.218514 30.320952, -93.218523 30.321067, -93.21861699999999 30.321061, -93.21860700000001 30.320946, -93.218514 30.320952))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>26.845764</p></td>
+<td><p>0.297511869</p></td>
+</tr>
+<tr class="row-even"><td><p>39</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>316.8158584</p></td>
+<td><p>-93.24044</p></td>
+<td><p>30.30736</p></td>
+<td><p>11</p></td>
+<td><p>127.4578083</p></td>
+<td><p>POLYGON ((-93.240503 30.30745, -93.240503 30.307272, -93.240379 30.307272, -93.240379 30.30745, -93.240503 30.30745))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>34.19402141</p></td>
+<td><p>0.647000212</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>93.3012421</p></td>
+<td><p>-93.24026</p></td>
+<td><p>30.30936</p></td>
+<td><p>11</p></td>
+<td><p>127.3900897</p></td>
+<td><p>POLYGON ((-93.240229 30.309307, -93.240229 30.309407, -93.24029400000001 30.309407, -93.24029400000001 30.309307, -93.240229 30.309307))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>24.24495904</p></td>
+<td><p>0.426823537</p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>532.0776282</p></td>
+<td><p>-93.24248</p></td>
+<td><p>30.30579</p></td>
+<td><p>11</p></td>
+<td><p>127.5123574</p></td>
+<td><p>POLYGON ((-93.242389 30.305854, -93.242473 30.305855, -93.24247099999999 30.305921, -93.24257299999999 30.305923, -93.242577 30.305751, -93.242526 30.305751, -93.242527 30.305671, -93.242392 30.305669, -93.242389 30.305854))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>2.034280171</p></td>
+<td><p>0.001050139</p></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>167.8007375</p></td>
+<td><p>-93.23683</p></td>
+<td><p>30.30216</p></td>
+<td><p>43</p></td>
+<td><p>127.6313309</p></td>
+<td><p>POLYGON ((-93.23671 30.302142, -93.236711 30.30219, -93.236952 30.302188, -93.236951 30.302139, -93.23671 30.302142))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>15.46826589</p></td>
+<td><p>0.45840358</p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>233.9420462</p></td>
+<td><p>-93.23492</p></td>
+<td><p>30.30332</p></td>
+<td><p>43</p></td>
+<td><p>127.5909665</p></td>
+<td><p>POLYGON ((-93.234979 30.303424, -93.234944 30.303208, -93.23487 30.303217, -93.234905 30.303433, -93.234979 30.303424))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>8.866194099</p></td>
+<td><p>0.435061127</p></td>
+</tr>
+<tr class="row-odd"><td><p>44</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>330.1987097</p></td>
+<td><p>-93.23904</p></td>
+<td><p>30.30463</p></td>
+<td><p>11</p></td>
+<td><p>127.5492912</p></td>
+<td><p>POLYGON ((-93.239119 30.304711, -93.239119 30.304572, -93.23904899999999 30.304572, -93.23904899999999 30.304556, -93.23895 30.304556, -93.23895 30.304665, -93.238995 30.304665, -93.238995 30.304711, -93.239119 30.304711))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>13.62903111</p></td>
+<td><p>0.538372249</p></td>
+</tr>
+<tr class="row-even"><td><p>45</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>226.152418</p></td>
+<td><p>-93.24021</p></td>
+<td><p>30.30511</p></td>
+<td><p>11</p></td>
+<td><p>127.5338058</p></td>
+<td><p>POLYGON ((-93.240133 30.305058, -93.240133 30.305146, -93.24018599999999 30.305146, -93.24018599999999 30.305176, -93.24028 30.305176, -93.24028 30.305058, -93.240133 30.305058))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>31.15525557</p></td>
+<td><p>0.910460585</p></td>
+</tr>
+<tr class="row-odd"><td><p>46</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>339.6766232</p></td>
+<td><p>-93.22532</p></td>
+<td><p>30.31013</p></td>
+<td><p>11</p></td>
+<td><p>127.3550899</p></td>
+<td><p>POLYGON ((-93.225421 30.31019, -93.225421 30.310074, -93.225217 30.310074, -93.225217 30.31019, -93.225421 30.31019))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>7.100456759</p></td>
+<td><p>0.758592776</p></td>
+</tr>
+<tr class="row-even"><td><p>47</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>378.720831</p></td>
+<td><p>-93.22581</p></td>
+<td><p>30.31408</p></td>
+<td><p>43</p></td>
+<td><p>127.2219139</p></td>
+<td><p>POLYGON ((-93.225701 30.314141, -93.225925 30.314145, -93.225927 30.314027, -93.22570399999999 30.314023, -93.225701 30.314141))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>27.94022648</p></td>
+<td><p>0.223307862</p></td>
+</tr>
+<tr class="row-odd"><td><p>48</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>471.1177977</p></td>
+<td><p>-93.21366</p></td>
+<td><p>30.31316</p></td>
+<td><p>43</p></td>
+<td><p>127.2473045</p></td>
+<td><p>POLYGON ((-93.213581 30.313049, -93.213587 30.31328, -93.213729 30.313277, -93.213723 30.313046, -93.213581 30.313049))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>8.356482753</p></td>
+<td><p>0.0950334</p></td>
+</tr>
+<tr class="row-even"><td><p>49</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>274.821505</p></td>
+<td><p>-93.2221</p></td>
+<td><p>30.30392</p></td>
+<td><p>11</p></td>
+<td><p>127.5630477</p></td>
+<td><p>POLYGON ((-93.222194 30.30397, -93.222194 30.303861, -93.222055 30.303861, -93.222055 30.303896, -93.22200100000001 30.303896, -93.22200100000001 30.30397, -93.222194 30.30397))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.87586722</p></td>
+<td><p>0.998556239</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>155.8658945</p></td>
+<td><p>-93.21464</p></td>
+<td><p>30.29744</p></td>
+<td><p>11</p></td>
+<td><p>127.7774504</p></td>
+<td><p>POLYGON ((-93.21462200000001 30.297493, -93.214665 30.297493, -93.214665 30.297453, -93.21474600000001 30.297453, -93.21474600000001 30.297412, -93.214518 30.297412, -93.214518 30.297451, -93.21462200000001 30.297451, -93.21462200000001 30.297493))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>31.89820445</p></td>
+<td><p>0.24007462</p></td>
+</tr>
+<tr class="row-even"><td><p>51</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>351.761189</p></td>
+<td><p>-93.20657</p></td>
+<td><p>30.33367</p></td>
+<td><p>43</p></td>
+<td><p>126.5553544</p></td>
+<td><p>POLYGON ((-93.20647599999999 30.333729, -93.206672 30.333729, -93.206672 30.333604, -93.20647599999999 30.333604, -93.20647599999999 30.333729))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>27.38735054</p></td>
+<td><p>0.709652595</p></td>
+</tr>
+<tr class="row-odd"><td><p>52</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>163.135567</p></td>
+<td><p>-93.20444</p></td>
+<td><p>30.31914</p></td>
+<td><p>43</p></td>
+<td><p>127.0427669</p></td>
+<td><p>POLYGON ((-93.204554 30.319102, -93.20431000000001 30.319135, -93.204319 30.319181, -93.204562 30.319147, -93.204554 30.319102))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.84878776</p></td>
+<td><p>0.840624382</p></td>
+</tr>
+<tr class="row-even"><td><p>53</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>390.7998694</p></td>
+<td><p>-93.20694</p></td>
+<td><p>30.31937</p></td>
+<td><p>11</p></td>
+<td><p>127.0360265</p></td>
+<td><p>POLYGON ((-93.207024 30.319288, -93.206839 30.319289, -93.206839 30.319396, -93.206902 30.319396, -93.206903 30.319461, -93.20702 30.31946, -93.207019 30.319349, -93.207024 30.319349, -93.207024 30.319288))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>16.21602487</p></td>
+<td><p>0.064703771</p></td>
+</tr>
+<tr class="row-odd"><td><p>54</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>199.0564618</p></td>
+<td><p>-93.19913</p></td>
+<td><p>30.32087</p></td>
+<td><p>11</p></td>
+<td><p>126.9832505</p></td>
+<td><p>POLYGON ((-93.199065 30.320808, -93.199065 30.32091, -93.199122 30.32091, -93.199122 30.32094, -93.199183 30.32094, -93.199183 30.320808, -93.199065 30.320808))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>16.64587558</p></td>
+<td><p>0.082959082</p></td>
+</tr>
+<tr class="row-even"><td><p>55</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>327.1490976</p></td>
+<td><p>-93.1871</p></td>
+<td><p>30.31982</p></td>
+<td><p>43</p></td>
+<td><p>127.0155748</p></td>
+<td><p>POLYGON ((-93.18720500000001 30.319866, -93.18720500000001 30.319762, -93.187017 30.319762, -93.187017 30.319905, -93.1871 30.319905, -93.1871 30.319866, -93.18720500000001 30.319866))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>17.88650863</p></td>
+<td><p>0.223955322</p></td>
+</tr>
+<tr class="row-odd"><td><p>56</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>525.9245631</p></td>
+<td><p>-93.17962</p></td>
+<td><p>30.31735</p></td>
+<td><p>43</p></td>
+<td><p>127.0972669</p></td>
+<td><p>POLYGON ((-93.17967400000001 30.31724, -93.17951600000001 30.317239, -93.17951499999999 30.317386, -93.17953900000001 30.317386, -93.17953900000001 30.317436, -93.17976400000001 30.317437, -93.17976400000001 30.317363, -93.17967299999999 30.317362, -93.17967400000001 30.31724))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>34.2205107</p></td>
+<td><p>0.390906937</p></td>
+</tr>
+<tr class="row-even"><td><p>57</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>460.2061461</p></td>
+<td><p>-93.18418</p></td>
+<td><p>30.31882</p></td>
+<td><p>43</p></td>
+<td><p>127.0488283</p></td>
+<td><p>POLYGON ((-93.184179 30.318868, -93.184344 30.318864, -93.184342 30.318788, -93.184175 30.318791, -93.184173 30.318715, -93.184068 30.318717, -93.184073 30.3189, -93.18418 30.318898, -93.184179 30.318868))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>2.349071672</p></td>
+<td><p>0.947249993</p></td>
+</tr>
+<tr class="row-odd"><td><p>58</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>170.9808774</p></td>
+<td><p>-93.1816</p></td>
+<td><p>30.32328</p></td>
+<td><p>11</p></td>
+<td><p>126.8991203</p></td>
+<td><p>POLYGON ((-93.181636 30.323216, -93.18153700000001 30.323226, -93.18155400000001 30.323345, -93.181653 30.323334, -93.181636 30.323216))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>32.93542009</p></td>
+<td><p>0.258575606</p></td>
+</tr>
+<tr class="row-even"><td><p>59</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>347.3004481</p></td>
+<td><p>-93.16694</p></td>
+<td><p>30.31671</p></td>
+<td><p>11</p></td>
+<td><p>127.1174284</p></td>
+<td><p>POLYGON ((-93.166854 30.316781, -93.167041 30.316761, -93.167023 30.316634, -93.166836 30.316653, -93.166854 30.316781))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>8.482339378</p></td>
+<td><p>0.934851592</p></td>
+</tr>
+<tr class="row-odd"><td><p>60</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>483.1749689</p></td>
+<td><p>-93.17327</p></td>
+<td><p>30.31739</p></td>
+<td><p>43</p></td>
+<td><p>127.095097</p></td>
+<td><p>POLYGON ((-93.173351 30.317302, -93.17321099999999 30.317304, -93.17321 30.317211, -93.173186 30.317211, -93.17319000000001 30.317496, -93.173354 30.317494, -93.173351 30.317302))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>19.14290324</p></td>
+<td><p>0.662598583</p></td>
+</tr>
+<tr class="row-even"><td><p>61</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>377.561167</p></td>
+<td><p>-93.1674</p></td>
+<td><p>30.31861</p></td>
+<td><p>11</p></td>
+<td><p>127.0541324</p></td>
+<td><p>POLYGON ((-93.167278 30.318555, -93.167284 30.318666, -93.16752 30.318657, -93.16751499999999 30.318546, -93.167278 30.318555))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>21.81080956</p></td>
+<td><p>0.3942057</p></td>
+</tr>
+<tr class="row-odd"><td><p>62</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>493.2406425</p></td>
+<td><p>-93.16689</p></td>
+<td><p>30.31935</p></td>
+<td><p>11</p></td>
+<td><p>127.0294331</p></td>
+<td><p>POLYGON ((-93.166764 30.31928, -93.166769 30.31941, -93.166864 30.319407, -93.166864 30.319421, -93.167017 30.319418, -93.167013 30.319274, -93.166764 30.31928))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>0.904605621</p></td>
+<td><p>0.668841916</p></td>
+</tr>
+<tr class="row-even"><td><p>63</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>646.0724548</p></td>
+<td><p>-93.17394</p></td>
+<td><p>30.31982</p></td>
+<td><p>43</p></td>
+<td><p>127.0138592</p></td>
+<td><p>POLYGON ((-93.17380900000001 30.319753, -93.17380799999999 30.319878, -93.17383700000001 30.319879, -93.17383700000001 30.319918, -93.174116 30.319919, -93.174117 30.319843, -93.173958 30.319842, -93.173959 30.319761, -93.174026 30.319761, -93.174026 30.319706, -93.173841 30.319705, -93.173841 30.319754, -93.17380900000001 30.319753))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>15.77181703</p></td>
+<td><p>0.862770531</p></td>
+</tr>
+<tr class="row-odd"><td><p>64</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>210.8451214</p></td>
+<td><p>-93.19326</p></td>
+<td><p>30.31541</p></td>
+<td><p>11</p></td>
+<td><p>127.1648336</p></td>
+<td><p>POLYGON ((-93.193189 30.315464, -93.193325 30.315464, -93.193325 30.315356, -93.193189 30.315356, -93.193189 30.315464))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>9.561230613</p></td>
+<td><p>0.930352536</p></td>
+</tr>
+<tr class="row-even"><td><p>65</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>311.4160015</p></td>
+<td><p>-93.19102</p></td>
+<td><p>30.3155</p></td>
+<td><p>11</p></td>
+<td><p>127.1612862</p></td>
+<td><p>POLYGON ((-93.19102100000001 30.315413, -93.19102100000001 30.315444, -93.190941 30.315444, -93.190941 30.315571, -93.19109400000001 30.315571, -93.19109400000001 30.315413, -93.19102100000001 30.315413))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>22.05415866</p></td>
+<td><p>0.74121082</p></td>
+</tr>
+<tr class="row-odd"><td><p>66</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>332.4055153</p></td>
+<td><p>-93.19949</p></td>
+<td><p>30.29933</p></td>
+<td><p>12</p></td>
+<td><p>127.7064494</p></td>
+<td><p>POLYGON ((-93.199395 30.299274, -93.199395 30.299394, -93.19958800000001 30.299394, -93.19958800000001 30.299274, -93.199395 30.299274))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>17.34222042</p></td>
+<td><p>0.767634322</p></td>
+</tr>
+<tr class="row-even"><td><p>67</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>328.8916429</p></td>
+<td><p>-93.20266</p></td>
+<td><p>30.30436</p></td>
+<td><p>43</p></td>
+<td><p>127.5389072</p></td>
+<td><p>POLYGON ((-93.20274499999999 30.304294, -93.202563 30.304294, -93.202563 30.304377, -93.202617 30.304377, -93.202617 30.304438, -93.20274499999999 30.304438, -93.20274499999999 30.304294))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>11.54237249</p></td>
+<td><p>0.105957292</p></td>
+</tr>
+<tr class="row-odd"><td><p>68</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>70.7315168</p></td>
+<td><p>-93.18902</p></td>
+<td><p>30.30218</p></td>
+<td><p>11</p></td>
+<td><p>127.6071353</p></td>
+<td><p>POLYGON ((-93.18904999999999 30.302224, -93.18904999999999 30.302136, -93.18899399999999 30.302136, -93.18899399999999 30.302224, -93.18904999999999 30.302224))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>8.571094931</p></td>
+<td><p>0.045042443</p></td>
+</tr>
+<tr class="row-even"><td><p>69</p></td>
+<td><p>Hip</p></td>
+<td><p>AE</p></td>
+<td><p>346.5947126</p></td>
+<td><p>-93.16463</p></td>
+<td><p>30.30793</p></td>
+<td><p>62</p></td>
+<td><p>127.4099475</p></td>
+<td><p>POLYGON ((-93.16459399999999 30.307824, -93.164503 30.307902, -93.16465700000001 30.308035, -93.164748 30.307956, -93.16459399999999 30.307824))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES3</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>1.510310906</p></td>
+<td><p>0.128545776</p></td>
+</tr>
+<tr class="row-odd"><td><p>70</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>49.34692152</p></td>
+<td><p>-93.17255</p></td>
+<td><p>30.30487</p></td>
+<td><p>11</p></td>
+<td><p>127.5130653</p></td>
+<td><p>POLYGON ((-93.17258200000001 30.304841, -93.17252000000001 30.304845, -93.172526 30.304901, -93.17258699999999 30.304896, -93.17258200000001 30.304841))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>30.10223443</p></td>
+<td><p>0.331268769</p></td>
+</tr>
+<tr class="row-even"><td><p>71</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>188.9587309</p></td>
+<td><p>-93.23218</p></td>
+<td><p>30.2807</p></td>
+<td><p>43</p></td>
+<td><p>128.3538133</p></td>
+<td><p>POLYGON ((-93.23206500000001 30.280657, -93.23206500000001 30.280703, -93.232193 30.280703, -93.232193 30.280761, -93.232263 30.280761, -93.232263 30.280657, -93.23206500000001 30.280657))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>26.33673639</p></td>
+<td><p>0.494315755</p></td>
+</tr>
+<tr class="row-odd"><td><p>72</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>788.1511023</p></td>
+<td><p>-93.23082</p></td>
+<td><p>30.28252</p></td>
+<td><p>43</p></td>
+<td><p>128.2913127</p></td>
+<td><p>POLYGON ((-93.230833 30.282496, -93.23080299999999 30.282445, -93.230896 30.282403, -93.230859 30.282343, -93.230752 30.282391, -93.230783 30.282444, -93.230642 30.282508, -93.230734 30.282661, -93.231026 30.28253, -93.230969 30.282435, -93.230833 30.282496))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>5.866613154</p></td>
+<td><p>0.852758946</p></td>
+</tr>
+<tr class="row-even"><td><p>73</p></td>
+<td><p>Hip</p></td>
+<td><p>AE</p></td>
+<td><p>695.6523277</p></td>
+<td><p>-93.23261</p></td>
+<td><p>30.27572</p></td>
+<td><p>41</p></td>
+<td><p>128.5220278</p></td>
+<td><p>POLYGON ((-93.23244 30.275722, -93.232722 30.275879, -93.232795 30.275782, -93.23260000000001 30.275673, -93.232658 30.275595, -93.23257099999999 30.275547, -93.23244 30.275722))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>30.52783086</p></td>
+<td><p>0.483588645</p></td>
+</tr>
+<tr class="row-odd"><td><p>74</p></td>
+<td><p>Gable</p></td>
+<td><p>AE</p></td>
+<td><p>219.8122614</p></td>
+<td><p>-93.22098</p></td>
+<td><p>30.2749</p></td>
+<td><p>62</p></td>
+<td><p>128.5407034</p></td>
+<td><p>POLYGON ((-93.220899 30.274866, -93.22094800000001 30.274976, -93.221069 30.274935, -93.22102 30.274825, -93.220899 30.274866))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>4.551653511</p></td>
+<td><p>0.998472525</p></td>
+</tr>
+<tr class="row-even"><td><p>75</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>184.7018099</p></td>
+<td><p>-93.22978</p></td>
+<td><p>30.27572</p></td>
+<td><p>62</p></td>
+<td><p>128.5198983</p></td>
+<td><p>POLYGON ((-93.229691 30.275644, -93.22966099999999 30.27569, -93.229873 30.275794, -93.22990299999999 30.275748, -93.229691 30.275644))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>0.115924043</p></td>
+<td><p>0.362629223</p></td>
+</tr>
+<tr class="row-odd"><td><p>76</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>408.7525701</p></td>
+<td><p>-93.20094</p></td>
+<td><p>30.29555</p></td>
+<td><p>11</p></td>
+<td><p>127.8343104</p></td>
+<td><p>POLYGON ((-93.201004 30.295426, -93.200889 30.295426, -93.20089 30.295575, -93.20086000000001 30.295575, -93.200861 30.295653, -93.20100600000001 30.295653, -93.201004 30.295426))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>5.745336059</p></td>
+<td><p>0.165987801</p></td>
+</tr>
+<tr class="row-even"><td><p>77</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>67.51256165</p></td>
+<td><p>-93.19737</p></td>
+<td><p>30.29654</p></td>
+<td><p>11</p></td>
+<td><p>127.7994987</p></td>
+<td><p>POLYGON ((-93.19734099999999 30.296578, -93.197397 30.296578, -93.197397 30.296494, -93.19734099999999 30.296494, -93.19734099999999 30.296578))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>13.29887547</p></td>
+<td><p>0.969124547</p></td>
+</tr>
+<tr class="row-odd"><td><p>78</p></td>
+<td><p>Hip</p></td>
+<td><p>AE</p></td>
+<td><p>758.4412688</p></td>
+<td><p>-93.16689</p></td>
+<td><p>30.28743</p></td>
+<td><p>62</p></td>
+<td><p>128.0937139</p></td>
+<td><p>POLYGON ((-93.166787 30.287555, -93.16704900000001 30.287501, -93.16699699999999 30.28731, -93.166735 30.287364, -93.166787 30.287555))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>28.17081563</p></td>
+<td><p>0.149117449</p></td>
+</tr>
+<tr class="row-even"><td><p>79</p></td>
+<td><p>Hip</p></td>
+<td><p>AE</p></td>
+<td><p>744.5722689</p></td>
+<td><p>-93.18641</p></td>
+<td><p>30.2696</p></td>
+<td><p>43</p></td>
+<td><p>128.6965056</p></td>
+<td><p>POLYGON ((-93.186341 30.269573, -93.18626 30.269613, -93.186367 30.26977, -93.186542 30.269681, -93.186471 30.269576, -93.18649600000001 30.269444, -93.186369 30.269425, -93.186341 30.269573))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>25.664967</p></td>
+<td><p>0.627394807</p></td>
+</tr>
+<tr class="row-odd"><td><p>80</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>250.2085432</p></td>
+<td><p>-93.1882</p></td>
+<td><p>30.26002</p></td>
+<td><p>11</p></td>
+<td><p>129.0177507</p></td>
+<td><p>POLYGON ((-93.18811700000001 30.259961, -93.18811700000001 30.26007, -93.188277 30.26007, -93.188277 30.259961, -93.18811700000001 30.259961))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>14.85900024</p></td>
+<td><p>0.36147846</p></td>
+</tr>
+<tr class="row-even"><td><p>81</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>170.4410381</p></td>
+<td><p>-93.18751</p></td>
+<td><p>30.26048</p></td>
+<td><p>11</p></td>
+<td><p>129.0016647</p></td>
+<td><p>POLYGON ((-93.187462 30.260425, -93.187462 30.260545, -93.187561 30.260545, -93.187561 30.260425, -93.187462 30.260425))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>23.36275505</p></td>
+<td><p>0.742957127</p></td>
+</tr>
+<tr class="row-odd"><td><p>82</p></td>
+<td><p>Flat</p></td>
+<td><p>AE</p></td>
+<td><p>582.2935647</p></td>
+<td><p>-93.16707</p></td>
+<td><p>30.2756</p></td>
+<td><p>43</p></td>
+<td><p>128.4879979</p></td>
+<td><p>POLYGON ((-93.167025 30.275822, -93.167117 30.275823, -93.167117 30.275379, -93.16702600000001 30.275379, -93.167025 30.275822))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>8.949129873</p></td>
+<td><p>0.203327118</p></td>
+</tr>
+<tr class="row-even"><td><p>83</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>141.9476119</p></td>
+<td><p>-93.18289</p></td>
+<td><p>30.26014</p></td>
+<td><p>11</p></td>
+<td><p>129.0106391</p></td>
+<td><p>POLYGON ((-93.182835 30.260184, -93.182937 30.260184, -93.182937 30.260087, -93.182835 30.260087, -93.182835 30.260184))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.48802973</p></td>
+<td><p>0.136320844</p></td>
+</tr>
+<tr class="row-odd"><td><p>84</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>269.7609607</p></td>
+<td><p>-93.18232</p></td>
+<td><p>30.2644</p></td>
+<td><p>11</p></td>
+<td><p>128.8680228</p></td>
+<td><p>POLYGON ((-93.18224499999999 30.264461, -93.18240299999999 30.264461, -93.18240299999999 30.264342, -93.18224499999999 30.264342, -93.18224499999999 30.264461))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>32.46152006</p></td>
+<td><p>0.196515228</p></td>
+</tr>
+<tr class="row-even"><td><p>85</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>159.6617626</p></td>
+<td><p>-93.1757</p></td>
+<td><p>30.26638</p></td>
+<td><p>11</p></td>
+<td><p>128.7987239</p></td>
+<td><p>POLYGON ((-93.175642 30.266328, -93.175642 30.266432, -93.175749 30.266432, -93.175749 30.266328, -93.175642 30.266328))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>10.86406262</p></td>
+<td><p>0.905078869</p></td>
+</tr>
+<tr class="row-odd"><td><p>86</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>775.8241426</p></td>
+<td><p>-93.21578</p></td>
+<td><p>30.23528</p></td>
+<td><p>14</p></td>
+<td><p>129.8658385</p></td>
+<td><p>POLYGON ((-93.21554999999999 30.235219, -93.215552 30.235338, -93.21600599999999 30.235335, -93.216005 30.235216, -93.21554999999999 30.235219))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES3</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>24.04138669</p></td>
+<td><p>0.769879917</p></td>
+</tr>
+<tr class="row-even"><td><p>87</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>256.5563324</p></td>
+<td><p>-93.21248</p></td>
+<td><p>30.22404</p></td>
+<td><p>11</p></td>
+<td><p>130.2374356</p></td>
+<td><p>POLYGON ((-93.212433 30.223939, -93.212433 30.22414, -93.21252200000001 30.22414, -93.21252200000001 30.223939, -93.212433 30.223939))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>20.17780208</p></td>
+<td><p>0.046716246</p></td>
+</tr>
+<tr class="row-odd"><td><p>88</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>142.6138632</p></td>
+<td><p>-93.21008</p></td>
+<td><p>30.22494</p></td>
+<td><p>11</p></td>
+<td><p>130.2052157</p></td>
+<td><p>POLYGON ((-93.210022 30.224891, -93.210022 30.224979, -93.21013499999999 30.224979, -93.21013499999999 30.224891, -93.210022 30.224891))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES3</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>16.73892145</p></td>
+<td><p>0.080236382</p></td>
+</tr>
+<tr class="row-even"><td><p>89</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>3796.099474</p></td>
+<td><p>-93.2105</p></td>
+<td><p>30.22796</p></td>
+<td><p>12</p></td>
+<td><p>130.1047807</p></td>
+<td><p>POLYGON ((-93.210014 30.2277, -93.20999399999999 30.227809, -93.210052 30.227817, -93.210007 30.228058, -93.210184 30.228083, -93.21022000000001 30.227893, -93.210251 30.227898, -93.210269 30.227868, -93.21036599999999 30.227881, -93.21032700000001 30.22809, -93.21041200000001 30.228129, -93.210509 30.228142, -93.21053499999999 30.228099, -93.210572 30.227905, -93.210649 30.227916, -93.21060799999999 30.228135, -93.21111500000001 30.228205, -93.211169 30.228118, -93.21113699999999 30.228103, -93.211147 30.228048, -93.210742 30.227991, -93.210758 30.227905, -93.210708 30.227882, -93.210594 30.227866, -93.21060799999999 30.227792, -93.21043 30.227767, -93.21043899999999 30.22772, -93.210381 30.227712, -93.210374 30.22775, -93.210014 30.2277))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>32.14939287</p></td>
+<td><p>0.712989354</p></td>
+</tr>
+<tr class="row-odd"><td><p>90</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>682.0294412</p></td>
+<td><p>-93.20911</p></td>
+<td><p>30.22843</p></td>
+<td><p>12</p></td>
+<td><p>130.0878559</p></td>
+<td><p>POLYGON ((-93.209186 30.22829, -93.209011 30.228286, -93.209005 30.228469, -93.20905500000001 30.22847, -93.209051 30.228565, -93.209146 30.228568, -93.20914500000001 30.228607, -93.209222 30.228609, -93.20922400000001 30.228555, -93.209176 30.228554, -93.209186 30.22829))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES3</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>24.26747741</p></td>
+<td><p>0.443354735</p></td>
+</tr>
+<tr class="row-even"><td><p>91</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>290.2391711</p></td>
+<td><p>-93.20923</p></td>
+<td><p>30.22946</p></td>
+<td><p>11</p></td>
+<td><p>130.0535873</p></td>
+<td><p>POLYGON ((-93.20920099999999 30.229397, -93.209174 30.229396, -93.20917 30.229546, -93.20929 30.229549, -93.209295 30.229399, -93.209255 30.229398, -93.209256 30.229358, -93.209202 30.229357, -93.20920099999999 30.229397))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>10.53784062</p></td>
+<td><p>0.963151986</p></td>
+</tr>
+<tr class="row-odd"><td><p>92</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>229.0780601</p></td>
+<td><p>-93.21333</p></td>
+<td><p>30.23027</p></td>
+<td><p>12</p></td>
+<td><p>130.0305833</p></td>
+<td><p>POLYGON ((-93.21326500000001 30.230205, -93.21326500000001 30.230337, -93.213386 30.230337, -93.213386 30.230205, -93.21326500000001 30.230205))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>16.17644214</p></td>
+<td><p>0.808326233</p></td>
+</tr>
+<tr class="row-even"><td><p>93</p></td>
+<td><p>Gable</p></td>
+<td><p>x</p></td>
+<td><p>213.247151</p></td>
+<td><p>-93.19954</p></td>
+<td><p>30.25157</p></td>
+<td><p>11</p></td>
+<td><p>129.3074126</p></td>
+<td><p>POLYGON ((-93.199502 30.251514, -93.199501 30.251567, -93.19945199999999 30.251566, -93.199451 30.25162, -93.19961499999999 30.251622, -93.199617 30.251516, -93.199502 30.251514))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>1.813885253</p></td>
+<td><p>0.767537515</p></td>
+</tr>
+<tr class="row-odd"><td><p>94</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>124.5181088</p></td>
+<td><p>-93.19147</p></td>
+<td><p>30.25032</p></td>
+<td><p>11</p></td>
+<td><p>129.3433967</p></td>
+<td><p>POLYGON ((-93.19141 30.250356, -93.191534 30.250356, -93.191534 30.250286, -93.19141 30.250286, -93.19141 30.250356))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>16.16340029</p></td>
+<td><p>0.857174924</p></td>
+</tr>
+<tr class="row-even"><td><p>95</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>128.1044736</p></td>
+<td><p>-93.19118</p></td>
+<td><p>30.25033</p></td>
+<td><p>11</p></td>
+<td><p>129.3428427</p></td>
+<td><p>POLYGON ((-93.191131 30.250284, -93.191131 30.250379, -93.191225 30.250379, -93.191225 30.250284, -93.191131 30.250284))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>6.400891444</p></td>
+<td><p>0.927405361</p></td>
+</tr>
+<tr class="row-odd"><td><p>96</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>202.1001726</p></td>
+<td><p>-93.1935</p></td>
+<td><p>30.25135</p></td>
+<td><p>11</p></td>
+<td><p>129.3104631</p></td>
+<td><p>POLYGON ((-93.193478 30.251382, -93.193591 30.251382, -93.193591 30.25131, -93.193414 30.25131, -93.193414 30.251403, -93.193478 30.251403, -93.193478 30.251382))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>7.92828187</p></td>
+<td><p>0.389141769</p></td>
+</tr>
+<tr class="row-even"><td><p>97</p></td>
+<td><p>Flat</p></td>
+<td><p>X</p></td>
+<td><p>98.41107328</p></td>
+<td><p>-93.1908</p></td>
+<td><p>30.25192</p></td>
+<td><p>11</p></td>
+<td><p>129.2896441</p></td>
+<td><p>POLYGON ((-93.190726 30.251943, -93.190866 30.251943, -93.190866 30.251894, -93.190726 30.251894, -93.190726 30.251943))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>2</p></td>
+<td><p>27.8051145</p></td>
+<td><p>0.905602928</p></td>
+</tr>
+<tr class="row-odd"><td><p>98</p></td>
+<td><p>Gable</p></td>
+<td><p>X</p></td>
+<td><p>193.3654044</p></td>
+<td><p>-93.19567</p></td>
+<td><p>30.2522</p></td>
+<td><p>11</p></td>
+<td><p>129.2835978</p></td>
+<td><p>POLYGON ((-93.195745 30.252244, -93.195745 30.252149, -93.195632 30.252149, -93.195632 30.252195, -93.195576 30.252195, -93.195576 30.252244, -93.195745 30.252244))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>27.95868829</p></td>
+<td><p>0.149910339</p></td>
+</tr>
+<tr class="row-even"><td><p>99</p></td>
+<td><p>Hip</p></td>
+<td><p>AE</p></td>
+<td><p>302.9017657</p></td>
+<td><p>-93.19421</p></td>
+<td><p>30.2545</p></td>
+<td><p>11</p></td>
+<td><p>129.2056361</p></td>
+<td><p>POLYGON ((-93.194103 30.254556, -93.19431 30.254556, -93.19431 30.254454, -93.194103 30.254454, -93.194103 30.254556))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>9.256346842</p></td>
+<td><p>0.479698555</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Hip</p></td>
+<td><p>X</p></td>
+<td><p>224.2427133</p></td>
+<td><p>-93.20315</p></td>
+<td><p>30.242</p></td>
+<td><p>11</p></td>
+<td><p>129.6299855</p></td>
+<td><p>POLYGON ((-93.203247 30.241959, -93.20305399999999 30.241959, -93.20305399999999 30.24204, -93.203247 30.24204, -93.203247 30.241959))</p></td>
+<td><p>Wood</p></td>
+<td><p>RES1</p></td>
+<td><p>Above</p></td>
+<td><p>1.1</p></td>
+<td><p>1</p></td>
+<td><p>13.26119735</p></td>
+<td><p>0.211202145</p></td>
+</tr>
+</tbody>
+</table>
+<p>The description of assets in the inventory adopts the HAZUS building classifications.
+The building inventory is generated by <a class="reference external" href="https://github.com/NHERI-SimCenter/BRAILS">BRAILS</a> based on street view and satellite images using deep learning.</p>
+<p>It is estimated that wood residential building is the predominant structure type in this region.
+Therefore, all buildings in the inventory are assumed to be wood residential buildings in the analysis.
+Based on the assumption, <a class="reference external" href="https://github.com/NHERI-SimCenter/BRAILS">BRAILS</a> further
+refines the building types as single-family (RES1) or multi-family (RES3) building based on their occupancy class inferred from street view image.
+The inference shows 94% of the buildings in this region can be classified as single-family building, the rest are multi-family building.</p>
+</div>
+<div class="section" id="processing-method-of-building-inventory">
+<h2><span class="section-number">4.2.2. </span>Processing Method of Building Inventory<a class="headerlink" href="#processing-method-of-building-inventory" title="Permalink to this headline">¶</a></h2>
+<p>This section, organized by the workflow’s progressive levels of fidelity, describes how a large-scale
+building inventory was derived for the case study region.</p>
+<p>At Level 1, a building inventory is created using <a class="reference external" href="https://github.com/NHERI-SimCenter/BRAILS">BRAILS</a> that
+leverages machine learning and image processing to generate attributes required for the corresponding
+Level-1 loss assessment.
+It is emphasized that the intent is to demonstrate how an inventory could
+be constructed and not to address potential errors, omissions or inaccuracies in the source data,
+i.e., source data are assumed to be accurate and no additional quality assurance was conducted outside
+of addressing glaring omissions or errors.</p>
+<div class="section" id="phase-i-attribute-definition">
+<h3>Phase I: Attribute Definition<a class="headerlink" href="#phase-i-attribute-definition" title="Permalink to this headline">¶</a></h3>
+<p>All the attributes required for loss estimation were first identified to develop the Building Inventory
+data model, which catalogs each attribute, its purpose, its format (alphanumeric, floating point number,
+etc.), the data source used to define that attribute and the field(s) needed from that data source, any
+transformations of that source data necessary to align with the units or conventions used in the Building
+Inventory, and any relevant details explaining notations, assumptions, or reference documents (<a class="reference internal" href="#bldg-inv-dm-lc"><span class="std std-numref">Table 4.2.2</span></a>).</p>
+<table class="docutils align-center" id="bldg-inv-dm-lc">
+<caption><span class="caption-number">Table 4.2.2 </span><span class="caption-text">Building Inventory data model developed in this testbed.</span><a class="headerlink" href="#bldg-inv-dm-lc" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Format</p></th>
+<th class="head"><p>Source</p></th>
+<th class="head"><p>Field</p></th>
+<th class="head"><p>Transformation</p></th>
+<th class="head"><p>Detail</p></th>
+<th class="head"><p>Phase</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BldgID</p></td>
+<td><p>Building unique ID. The first four characters will be “NJBF,” followed by a 9-digit zero-padded number.</p></td>
+<td><p>NJBF#########</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>BldgUniqueID</p></td>
+<td><p>None</p></td>
+<td><p>32,828 buildings</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Consider how to capture provenance info; IDs link to methodology?</p></td>
+</tr>
+<tr class="row-odd"><td><p>Address</p></td>
+<td><p>Typically assessor field for property location. This is distinct from Street Address in MODIV which is associated with the billing address</p></td>
+<td><p>Alphanumeric</p></td>
+<td><p>MODIV</p></td>
+<td><p>PROP_LOC</p></td>
+<td><p>None</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td><p>For informational purposes only; use coordinates for locating property</p></td>
+</tr>
+<tr class="row-even"><td><p>City</p></td>
+<td><p>Typically assessor field for property location – city.</p></td>
+<td><p>Alphanumeric</p></td>
+<td><p>MODIV</p></td>
+<td><p>MUN_NAME</p></td>
+<td><p>None</p></td>
+<td><p>This is needed for Hazus Assignment</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>State</p></td>
+<td><p>Typically assessor field for property location - state abbreviation.</p></td>
+<td><p>Alphanumeric</p></td>
+<td></td>
+<td><p>Autogenerated</p></td>
+<td></td>
+<td><p>Populate with NJ by default</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Latitude</p></td>
+<td><p>Latitude of the Building Centroid (inside polygon).</p></td>
+<td><p>Floating point number (Decimal Degrees)</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>Latitude</p></td>
+<td><p>Transformed to WGS84, EPSG 4326</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Longitude</p></td>
+<td><p>Longitude of the Building Centroid (inside polygon).</p></td>
+<td><p>Floating point number (Decimal Degrees)</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>Longitude</p></td>
+<td><p>Transformed to WGS84, EPSG 4326</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>OccupancyClass</p></td>
+<td><p>Subclassifications of buildings across various categories of Residential (RES), Commercial (COM), Industrial (IND), Agriculture (AGR), Government (GOV), Education (EDU), Religious/Non-Profit (REL).</p></td>
+<td><p>Choices: RES1, RES2, RES3A, RES3B, RES3C, RES3D, RES3E, RES3F, RES4, RES5, RES6, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, COM10, IND1, IND2, IND3, IND4, IND5, IND6, AGR1, REL1, GOV1, GOV2, EDU1, EDU2</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>OccupancyClass</p></td>
+<td><p>None</p></td>
+<td><p>RES1 - Single Family Dwelling
+RES2 - Mobile Home
+RES3A - Multi Family Dwelling - Duplex
+RES3B - Multi Family Dwelling - 3-4 Units
+RES3C - Multi Family Dwelling - 5-9 Units
+RES3D - Multi Family Dwelling - 10-19 Units
+RES3E - Multi Family Dwelling - 20-49 Units
+RES3F - Multi Family Dwelling - 50+ Units
+RES4 - Temporary Lodging
+RES5 - Institutional Dormitory
+RES6 - Nursing Home
+COM1 - Retail Trade
+COM2 - Wholesale Trade
+COM3 - Personal and Repair Services
+COM4 - Business/ Professional/ Technical Services
+COM5 - Depository Institutions
+COM6 - Hospitals
+COM7 - Medial Office/ Clinics
+COM8 - Entertainment &amp; Recreation
+COM9 - Theaters
+COM10 - Parking
+IND1 - Heavy
+IND2 - Light
+IND3 - Food/ Drugs/ Chemicals
+IND4 - Metals/ Minerals Processing
+IND5 - High Technology
+IND6 - Construction
+AGR1 - Agriculture
+REL1 - Church/ Membership Organizations
+GOV1 - General Services
+GOV2 - Emergency Services
+EDU1 - Schools/ Libraries
+EDU2 - Colleges/ Universities</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Flood, Wind</p>
+<p>Map NJDEP UDF to various Hazus Classes later (which vary by hazards)</p>
+<p>Confirmed available for all buildings</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>BuildingType</p></td>
+<td><p>Core construction material type; Wood, Concrete, Steel, Masonry, Manufactured Housing.</p></td>
+<td><p>Choices: 3001, 3002, 3003, 3004, 3005</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>BuildingType</p></td>
+<td><p>None</p></td>
+<td><p>3001 - Wood 
+3002 - Steel 
+3003 - Concrete  
+3004 - Masonry  
+3005 - ManufHousing - Mobile Home</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Missing for 2 buildings. Missing points filled based on street-level imagery.</p></td>
+</tr>
+<tr class="row-even"><td><p>UseCode</p></td>
+<td><p>Class 4 Use Codes (Field 67) applicable to commercial buildings only, describing specific use of commercial properties.</p></td>
+<td><p>Integer (3-digit)</p></td>
+<td><p>MODIV</p></td>
+<td><p>PROP_USE</p></td>
+<td></td>
+<td><p>See MODIV Manual Reference B</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Available for 1545 buildings (4.71% coverage).</p></td>
+</tr>
+<tr class="row-odd"><td><p>BldgClass</p></td>
+<td><p>Building class according to NJ Appraisal Manual (see Vol 2)</p></td>
+<td><p>Integer (3-digit)</p></td>
+<td><p>MODIV</p></td>
+<td><p>BLDG_CLASS</p></td>
+<td></td>
+<td><p>Can help to classify structural systems, roofs, envelopes and quality of construction; see BldgClass Tab</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Missing for 5737 buildings (82.5% coverage).</p></td>
+</tr>
+<tr class="row-even"><td><p>EssentialClass</p></td>
+<td><p>Designates several classes of essential facilities in the region based on open data to ensure they are properly modeled.</p></td>
+<td><p>Choices: PS, EOC, HO, HS, SCH</p></td>
+<td><p>NJOIT Data</p></td>
+<td></td>
+<td></td>
+<td><p>PS: police station
+FS: fire station
+EOC: emergency operation center
+HO: hospital 
+SCH: school (Encompasses ES: elementary school, HS: high school)
+Process KMLs against footprints to identify locations of police stations, emergency operations cetners, hospitals, high schools, fire stations, and elementary schools. Available KMLs define locations of Schools, Fire Stations, Emergency Medical Services, Law Enforcement (Police) and hospitals. Note EOCs for Atlantic County muncipalities are generally police stations, so EOCs will not be explicitly distinguished from PS in this testbed. The County EOC is located at: 5033 English Creek Avenue, Egg Harbor Township, NJ 08234.</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>DesignLevel</p></td>
+<td><p>Classification of level of engineering used in design process: Choices: Engineered (E), Pre-Engineered, (PE) Marginally Engineered (ME), Non-Engineered (NE)</p></td>
+<td><p>Choices: E, PE, ME, NE</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>If OccupancyClass = RES1 OR RES3A oR AGR1, DesignLevel = NE
+If OccupancyClass = EDU1 OR EDU2 OR GOV1 OR GOV2 OR COM6 OR IND1 OR IND3 OR IND4 OR IND5 OR IND6 OR COM10, DesignLevel = E
+If OccupancyClass = RES2, DesignLevel = PE
+If OccupancyClass = IND2, DesignLevel=ME
+If OccupancyClass = RES3B OR RES3C OR RES3D OR RES3E OR RES3F OR RES4 OR RES5 OR RES6 OR COM1 OR COM2 OR COM3 OR COM4 OR COM5 OR COM7 OR COM8 OR COM9 OR REL1 &amp; NumberofStories&gt;3, DesignLevel = E
+If OccupancyClass = RES3B OR RES3C OR RES3D OR RES3E OR RES3F OR RES4 OR RES5 OR RES6 OR COM1 OR COM2 OR COM3 OR COM4 OR COM5 OR COM7 OR COM8 OR COM9 OR REL1 &amp; NumberofStories&lt;4, DesignLevel = ME</p></td>
+<td><p>Wlil adopt the following definition: E=high rises, critical facilitites, goverment buildings, health care, schools; ME = hotels, apartments, offices, light industrial (1-3 stories); NE=single and duplex residences, small commercial; PE=Metal building systems and other pre-fab systems like mobile homes (see <a class="reference external" href="https://www.nap.edu/read/1993/chapter/15">https://www.nap.edu/read/1993/chapter/15</a>); since metal buildings aren’t easy to identify in the inventory, only mobile homes will receive PE; also note that difference between ME and E will be discerned for many classes of hotels, apartments, office and light industry based on height (over 3 stories assumed engineered)</p></td>
+<td><p>Asset Representation</p></td>
+<td><p>Available for all buildings.</p></td>
+</tr>
+<tr class="row-even"><td><p>YearBuiltNJDEP</p></td>
+<td><p>Assessor-provided Year of Construction from NJDEP Footprints</p></td>
+<td><p>Integer (4-digit)</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>YearBuilt</p></td>
+<td><p>May neglect pre 1970 in the future if SURF is used.</p></td>
+<td><p>Note exact years are needed for Hazus; 1969 Default</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Available for all buildings.</p></td>
+</tr>
+<tr class="row-odd"><td><p>YearBuiltMODIV</p></td>
+<td><p>Assessor-provided Year of Construction from MODIV</p></td>
+<td><p>Integer (4-digit)</p></td>
+<td><p>MODIV</p></td>
+<td><p>YR_CONSTRUCT</p></td>
+<td><p>May neglect pre 1970 in the future if SURF is used.</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td><p>Missing for 4744 buildings (85.6% coverage).</p></td>
+</tr>
+<tr class="row-even"><td><p>NumberofStories0</p></td>
+<td><p>Assessor-provided number of stories</p></td>
+<td><p>Integer (4-digit)</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>NumberofStories</p></td>
+<td><p>None</p></td>
+<td><p>3101 = RES1 1 Stories
+3102 = RES1 2 Stories
+3103 = RES1 3+ Stories
+3109 = RES1 1.5 Stories
+3201 = RES2 1 Stories
+3202 = RES2 2 Stories
+3203 = RES2 3+ Stories
+3301 = RES3X 1-2 Stories
+3303 = RES3X 3-4 Stories
+3305 = RES3X 5+ Stories
+3401 = OTHER 1-3 Stories
+3404 = OTHER 4-7 Stories
+3408 = OTHER 8+ Stories</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Flood</p>
+<p>Missing for 2 buildings. Missing points filled based on street-level imagery.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>NumberofStories1</p></td>
+<td><p>Number of stories estimated via image processing</p></td>
+<td><p>Integer</p></td>
+<td><p>StreetView</p></td>
+<td><p>Augmented Data</p></td>
+<td><p>None</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td><p>Flood</p></td>
+</tr>
+<tr class="row-even"><td><p>NoUnits</p></td>
+<td><p>Number of units in the property (commercial or residential)</p></td>
+<td><p>Integer</p></td>
+<td><p>MODIV</p></td>
+<td><p>DWELL, COMM_DWELL</p></td>
+<td><p>max(DWELL,COMM_DWELL)</p></td>
+<td><p>Note if the property is residential, then a value should only be in DWELL; if the property is commercial, then a value should only be in COMM_DWELL</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Available for all buildings.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PlanArea0</p></td>
+<td><p>Plan area in square feet from assessor databases</p></td>
+<td><p>Floating point number</p></td>
+<td><p>NJDEP BA</p></td>
+<td><p>AreaSqFt</p></td>
+<td><p>None</p></td>
+<td><p>Applies to Engineered structures</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Wind</p></td>
+</tr>
+<tr class="row-even"><td><p>PlanArea1</p></td>
+<td><p>Plan area in square feet from footprint data</p></td>
+<td><p>Floating point Number</p></td>
+<td><p>Footprints</p></td>
+<td><p>Augmented Data</p></td>
+<td><p>Calculate from footprints</p></td>
+<td><p>Applies to Engineered structures</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>FoundationType</p></td>
+<td><p>Classification using 7 types referenced by flood model</p></td>
+<td><p>Integer (4-digit)</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>FoundationType</p></td>
+<td><p>None</p></td>
+<td><p>3501 = Piles
+3502 = Piers
+3503 = Solid Wall
+3504 = Basement
+3505 = Crawlspace
+3506 = Fill
+3507 = Slab-on-Grade</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Flood</p>
+<p>Missing for 2 buildings. Missing points filled based on street-level imagery.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>SplitLevel</p></td>
+<td><p>Specifies if residential construction is split-level</p></td>
+<td><p>Choices: Yes, No</p></td>
+<td><p>MODIV</p></td>
+<td><p>BLDG_DESC</p></td>
+<td><p>IF BLDG_DESC(style)=S, SplitLevel=Yes, ELSE SplitLevel=No</p></td>
+<td><p>Building Description Field (13) - fifteen alpha-numeric characters: The information in a description should be listed in the following order: 1: stories, 2: exterior structural material, 3:style, 4:number of stalls, and 5: type of garage. Style contains the desired information for this field, where style of S is split-level. See p. 18 of MODIV Manual</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Under Inundation damage, the only case that is worth mentioning is the 2-story single-family home with split levels.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ElevationR0</p></td>
+<td><p>Elevation of the bottom plane of the roof (lowest edge of roof line) relative to grade (ft)</p></td>
+<td><p>Floating point number</p></td>
+<td><p>StreetView</p></td>
+<td><p>Augmented Data</p></td>
+<td></td>
+<td><p>See Elevation schematic for details</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>ElevationR1</p></td>
+<td><p>Elevation of highest point of the roof (peak of gable or apex of hip) relative to grade (ft)</p></td>
+<td><p>Floating point Number</p></td>
+<td><p>StreetView</p></td>
+<td><p>Augmented Data</p></td>
+<td></td>
+<td><p>See Elevation schematic for details</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>FirstFloorHt0</p></td>
+<td><p>Height above grade estimated from elevation certificate or inferred from foundation type (in feet): Defined as top of lowest/bottom floor</p></td>
+<td><p>Floating point Number</p></td>
+<td><p>NJDEP UDF</p></td>
+<td><p>FirstFloorHt</p></td>
+<td><p>None</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td><p>Flood</p>
+<p>Available for all buildings</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>FirstFloorHt1</p></td>
+<td><p>Height of top of floor as estimated from base of door height above grade, based on streetview imagery (in feet)</p></td>
+<td><p>Floating point Number</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>min(Elevations)</p></td>
+<td><p>May need to adjust to ensure it adopts the same convention as FirstFloorHt0</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Can be derived from Elevations eventually</p></td>
+</tr>
+<tr class="row-odd"><td><p>FloodZone</p></td>
+<td><p>Flood zone specified on FEMA FIRM based on building location</p></td>
+<td><p>Choices: 6101, 6102, 6103, 6104, 6105, 6106, 6107, 6108, 6109, 6110, 6111, 6112, 6113, 6114, 6115, 6199</p></td>
+<td><p>NJDEP SDE</p></td>
+<td><p>FloodZone</p></td>
+<td><p>None</p></td>
+<td><p>6101 = VE-Riverine floodway shown in coastal zone 
+6102 = VE 
+6103 = AE-Floodway 
+6104 = AE-Administrative floodway 
+6105 = AO-Floodway 
+6106 = AE 
+6107 = AH 
+6108 = AO 
+6109 = A 
+6110 = X-0.2 pct annual chance flood hazard 
+6111 = X-Area with reduced flood risk due to levee 
+6112 = X-Area of minimal flood hazard 
+6113 = Open water 
+6114 = D 
+6115 = Area not included 
+6199 = No zone available
+where
+A=1% annual flood risk, no BFEs
+AE=1% annual flood risk, with BFEs 
+AH=1% annual flood risk, shallow flooding like ponds
+AO=1% annual flood risk, river or stream areas
+V=1% annual flood risk, no BFEs, with damaging waves
+VE = 1% annual flood risk, BFEs, with damaging waves
+X=areas with minor flood risks, typically less than 1 ft.</p></td>
+<td><p>Hazard Characterization</p></td>
+<td><p>Flood</p></td>
+</tr>
+<tr class="row-even"><td><p>DSWI</p></td>
+<td><p>DesignWindSpeed I in mph</p></td>
+<td><p>Floating point number</p></td>
+<td><p>ATC API (ASCE 7)</p></td>
+<td><p>Augmented Data</p></td>
+<td></td>
+<td><p>Placehold the windzone from current hazard maps; possibly update with windzone at time of construction in Asset Representation module if this is used to infer likely vunerability.</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>DSWII</p></td>
+<td><p>DesignWindSpeed II in mph</p></td>
+<td><p>Floating point number</p></td>
+<td><p>ATC API (ASCE 7)</p></td>
+<td><p>Augmented Data</p></td>
+<td></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>DSWIII</p></td>
+<td><p>DesignWindSpeed III in mph</p></td>
+<td><p>Floating point number</p></td>
+<td><p>ATC API (ASCE 7)</p></td>
+<td><p>Augmented Data</p></td>
+<td></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>DSWIV</p></td>
+<td><p>DesignWindSpeed IV in mph</p></td>
+<td><p>Floating point number</p></td>
+<td><p>ATC API (ASCE 7)</p></td>
+<td><p>Augmented Data</p></td>
+<td></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>WindZone</p></td>
+<td><p>HAZUS-defined Wind Zone (For Manuactured homes, based on HUD Designation)</p></td>
+<td><p>Choices: I, II, III</p></td>
+<td></td>
+<td><p>Rule-assigned data</p></td>
+<td><p>WindZone=I</p></td>
+<td><p>All of NJ is in Zone I (<a class="reference external" href="https://www.manufacturedhousing.org/wind-map/">https://www.manufacturedhousing.org/wind-map/</a>)</p></td>
+<td><p>Asset Representation</p></td>
+<td><p>Mobile Homes (HAZUS)</p></td>
+</tr>
+<tr class="row-odd"><td><p>AvgJanTemp</p></td>
+<td><p>Average temperature in January below or above critial value of 25F.</p></td>
+<td><p>Choices: Above, Below</p></td>
+<td></td>
+<td><p>Default Assignment</p></td>
+<td><p>Default all values to Above.</p></td>
+<td><p>Verify against NOAA average daily temperature in January for NJ</p></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RoofShape</p></td>
+<td><p>Roof classified into equivalent hip, gable or flat</p></td>
+<td><p>Choices: Hip, Gable, Flat</p></td>
+<td><p>Aerial Imagery</p></td>
+<td><p>Augmented Data</p></td>
+<td><p>None</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Wind</p>
+<p>Missing for 3908 buildings (88.1% coverage)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>RoofSlope</p></td>
+<td><p>Slope of roof covering the majority of the dwelling</p></td>
+<td><p>Floating point number</p></td>
+<td><p>Aerial + Street Level Imagery</p></td>
+<td><p>Augmented Data</p></td>
+<td><p>Elevations plus polygon gives this</p></td>
+<td><p>Will need to extract from imagery eventually, defining slope of roof covering majority of footprint</p></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RoofCover</p></td>
+<td><p>Roof covering, specified only for residential construction.</p></td>
+<td><p>Choices: 5701, 5702, 5703, 5704</p></td>
+<td><p>NJDEP SDE</p></td>
+<td><p>RoofCovering</p></td>
+<td><p>None</p></td>
+<td><p>5701 = Shingles - Asphalt, Wood
+5702 = Clay Tiles
+5703 = Standing Seam (Metal)
+5704 = Slate</p></td>
+<td><p>Asset Representation</p></td>
+<td><p>Wind</p></td>
+</tr>
+<tr class="row-odd"><td><p>MeanRoofHt</p></td>
+<td><p>Mean height of roof system in ft</p></td>
+<td><p>Floating point number</p></td>
+<td><p>Aerial + Street Level Imagery</p></td>
+<td><p>Derived Data</p></td>
+<td><p>(ElevationR1+ElevationR0)/2</p></td>
+<td><p>Used only for WMUH</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>WindowArea</p></td>
+<td><p>Percentage of walls defined by window openings</p></td>
+<td><p>Floating point number (decimal&lt;1)</p></td>
+<td><p>StreetView</p></td>
+<td><p>Augmented Data</p></td>
+<td><p>None</p></td>
+<td><p>Applies to Engineered Buildings Only (masonry, concrete, and steel); calculated via segmentation algorithm on front image and assume same density on all sides</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Will keep the actual calculated value from segmentation algorithm; then later in Asset representation will assign the nearest equivalent value given the choices from HAZUS (20, 33, 50 percent)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Garage</p></td>
+<td><p>Assessor-provided type of garage.</p></td>
+<td><p>Floating point number</p></td>
+<td><p>MODIV</p></td>
+<td><p>BLDG_DESC</p></td>
+<td><p>IF BLDG_DESC(Type of garage)=AG, Garage=1.N, where N=BLDG_DESC(Number of stalls)
+IF BLDG_DESC(Type of Garage)=UG, Garage=0.N, where N=BLDG_DESC(Number of Stalls)
+IF BLDG_DESC(Type of garage)=00, Garage=0</p></td>
+<td><p>Building Description Field (13) - fifteen alpha-numeric characters: The information in a description should be listed in the following order: 1: stories, 2: exterior structural material, 3:style, 4:number of stalls, and 5: type of garage. Number of Stalls and Type of Garage contain the desired information for this field, where AG: Attached Garage, UG: Unattached Garage. See p. 18 of MODIV Manual</p></td>
+<td><p>Asset Description</p></td>
+<td><p>Wind</p>
+<p>Garage Info in MODIV is not formatted as expected. Will take more effort to be useful.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Terrain</p></td>
+<td><p>HAZUS-defined terrain classifications (x100) based on LULC data</p></td>
+<td><p>Choices: 3, 15, 35, 70, 100</p></td>
+<td><p>LU/LC Data</p></td>
+<td><p>Augmented Data</p></td>
+<td><p>IF FloodZone = 6101 or 6102 or 6102 or 6104 or 6106 or 6109, Terrain = 3
+ELSE IF LU/LC = 5000-5999 OR 4400 OR 6240 OR 7600, Terrain = 3
+ELSE IF LU/LC = 2000-2999, Terrain = 15
+ELSE IF LU/LC = 1110-1140 OR 6250-6252, Terrain = 35
+ELSE IF LU/LC = 4100-4300 OR 1600, Terrain = 70</p></td>
+<td><p>Based on processing Land Use/Land Cover data;  note that due to proximity to shoreline and thus open exposure of approaching hurricane at landfall, all coastal A and V-Zone properties are assumed to have roughnes 0.03. This encompasses all V and A Zone properties except those associated with AH or AO (6105, 6107, 6108)</p>
+<p>open (0.03) = 3
+light suburban (0.15) = 15
+suburban (0.35) = 35
+light trees (0.70) = 70
+trees (1.00) = 100</p>
+<p>Details: Mapped to Land Use Categories in NJ (see <a class="reference external" href="https://www.state.nj.us/dep/gis/digidownload/metadata/lulc02/anderson2002.html">https://www.state.nj.us/dep/gis/digidownload/metadata/lulc02/anderson2002.html</a>) by T. Wu group (see internal report on roughness calculations, Table 4). These are mapped to Hazus defintions as follows:</p>
+<p>Open Water (5400s) with zo=0.01 and barren land (7600) with zo=0.04 assume Open
+Open Space Developed, Low Intensity Developed, Medium Intensity Developed (1110-1140) assumed zo=0.35-0.4 assume Suburban
+High Intensity Developed (1600) with zo=0.6 assume Lt. Tree
+Forests of all classes (4100-4300) assumed zo=0.6 assume Lt. Tree
+Shrub (4400) with zo=0.06 assume Open
+Grasslands, pastures and agricultural areas (2000 series) with zo=0.1-0.15 assume Lt. Suburban
+Woody Wetlands (6250) with zo=0.3 assume suburban
+Emergent Herbaceous Wetlands (6240) with zo=0.03 assume Open 
+HAZUS category of trees (1.00) does not apply to any LU/LC in NJ</p>
+<p>Note: If any LU/LC in the current GIS layer is unassigned using these rules, the ranges in the ruleset will be expanded to encompass it.</p>
+<p>Exposure is currently averaged for full 360 around structure; can be determined from directional analysis when loads/pressures are directly specified on SAM</p>
+</td>
+<td><p>Asset Representation</p></td>
+<td><p>open (0.03) = 3
+light suburban (0.15) =15*
+suburban (0.35) = 35
+light trees (0.70) =70
+trees (1.00)=100</p>
+<p><a href="#id3"><span class="problematic" id="id4">*</span></a>can be used as a default for any footprints lacking data.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>AnalysisDefault</p></td>
+<td><p>Defines the default level of fidelity for analysis</p></td>
+<td><p>Choices: 1, 2, 3</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>IF NumberofStories1&gt;6, AnalysisDefault=2; ELSE AnalysisDefault=1</p></td>
+<td></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>AnalysisAdopted</p></td>
+<td><p>Defines the adopted level of fidelity for analysis</p></td>
+<td><p>Choices: 1, 2, 3</p></td>
+<td></td>
+<td><p>User Defined Data</p></td>
+<td><p>AnalysisAdopted=AnalysisDefault</p></td>
+<td><p>For now, set all to default</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Modifications</p></td>
+<td><p>Record of manual updates, corrections or modifications to record</p></td>
+<td><p>Alphanumeric (freeform)</p></td>
+<td></td>
+<td><p>User Defined Data</p></td>
+<td></td>
+<td></td>
+<td><p>General</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>HazusClass-W</p></td>
+<td><p>Hazus building classes as defined for wind hazards</p></td>
+<td><p>CHOICES: WSF1, WSF2, WMUH1, WMUH2, WMUH3, WMUH1NE, WMUH2NE, WMUH3NE, WMUH4NE, MSF1, MSF2, MMUH1, MMUH2, MMUH3, MLRM1, MLRM2, MLRI, MERBL, MERBM, MERBH, MECBL, MECBM, MECBH, MMUH1NE, MMUH2NE, MMUH3NE, CERBL, CERBM, CERBH, CECBL, CECBM, CECBH, SPMBS, SPMBM, SPMBL, SERBL, SERBM, SERBH, SECBL, SECBM, SECBH, MHPHUD, MH76HUD, MH94HUD-I, MH94HUD-II, MH94HUD-III, HUEFFS, HUEFSS, HUEFSM, HUEFSL, HUEFHS, HUEFHM, HUEFHL, HUEFPS, HUEFEO</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>See rules for assignment: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1YwJDKltX7GC2djntBoX7Pj9bVSJDNcSLwuhp2nHVxHQ/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1YwJDKltX7GC2djntBoX7Pj9bVSJDNcSLwuhp2nHVxHQ/edit?usp=sharing</a></p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RoofSystem</p></td>
+<td><p>Underlying roof structure, applies only to masonry buildings</p></td>
+<td><p>Choices: Wood, OWSJ</p></td>
+<td></td>
+<td></td>
+<td><p>IF HazusClass=MSF1-2, RoofSystem=Wood; IF HazusClass=MLRM1 or MLRM2, RoofSystem=OWSJ</p></td>
+<td><p>Note the only roof option for commercial masonry in NJ appraisers manual is OSWJ (BldgClass=103) so this suggests they do not even see alternate roof systems for this building class; residences would not need OWSJ (too short of span). Leave blank for all others.</p></td>
+<td><p>Asset Description</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>HPR</p></td>
+<td><p>Defines Hazard Prone Regions (HPR) for the purposes of Hazus wind vulnerability assignments for WSF1-2</p></td>
+<td><p>Choices: yes, no</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>WBD</p></td>
+<td><p>Defines Wind Borne Debris (WBD) for the purposes of Hazus wind vulnerability assignments for WSF1-2</p></td>
+<td><p>Choices: yes, no</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>SWR</p></td>
+<td><p>Defines Secondary Water Resistance (SWR) for the purposes of Hazus wind vulnerability assignments for WSF1-2, WMUH1-3, MSF1-2, MMUH1-3</p></td>
+<td><p>Choices: yes, no</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RoofCvr</p></td>
+<td><p>Defines roof cover for the purposes of Hazus wind vulnerability assignments for WMUH1-3, MMUH1-3, MERBL-M-H, MECBL-M-H, MLRI, MLRM1, MLRM2, SERBL-M-H, SECBL-M-H, CECBL-M-H, CERBL-M-H and Fire Stations (HUEFFS), Elementary Schools (HUEFSS), 2-story High School (HUEFSM) and 3-story High School (HUEFSL) and Hospitals (small - HUEFHS, medium - HUEFHM, large - HUEFHL)  and Police Stations (HUEFPS), Emergency Operation Centers (HUEFEO)</p></td>
+<td><p>Choices: N/A, BUR, SPM</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RoofQual</p></td>
+<td><p>Defines roof cover quality for the purposes of Hazus wind vulnerability assignments for WMUH1-3, MMUH1-3, MLRI</p></td>
+<td><p>Choices: N/A, poor, good</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RDA-Wood</p></td>
+<td><p>Defines Roof Deck Attachment (RDA) for wood for the purposes of Hazus wind vulnerability assignments for WSF1-2, WMUH1-3, MMUH1-3, MSF1-2, MLRM1, MLRM2</p></td>
+<td><p>Choices: A, B, C, D</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td><p>WSF and WMUH:
+A = 6d &#64; 6”/12”
+B = 8d &#64; 6”/12”
+C = 6d/8d mix &#64; 6”/6”
+D = 8d &#64; 6”/6”</p></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>RDA-OWSJ</p></td>
+<td><p>Defines Roof Deck Attachment (RDA) for OWSJ for the purposes of Hazus wind vulnerability assignments for MSF1-2</p></td>
+<td><p>Choices: smtl standard, smtl superior, cshl standard, cshl superior</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>R2WC</p></td>
+<td><p>Defines Roof to Wall Connection (R2WC) for the purposes of Hazus wind vulnerability assignments for WSF1-2, WMUH1-3, MMUH1-3, MSF1-2, MLRM1, MLRM2</p></td>
+<td><p>Choices: strap, toe-nail</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>shutters</p></td>
+<td><p>Defines use of window opening protection for the purposes of Hazus wind vulnerability assignments for WSF1-2, WMUH1-3, MMUH1-3, MSF1-2, MERBL-M-H, MECBL-M-H, MMUH1-3,MLRM1, MLRM2, SERBL-M-H, SECBL-M-H, CECBL-M-H, CERBL-M-H, SPMBS-M-L, MH94HUDI-II-III, MH76HUD, MHPHUD and Fire Stations (HUEFFS), Elementary Schools (HUEFSS), 2-story High School (HUEFSM) and 3-story High School (HUEFSL) and Hospitals (small - HUEFHS, medium - HUEFHM, large - HUEFHL)  and Police Stations (HUEFPS), Emergency Operation Centers (HUEFEO)</p></td>
+<td><p>Choices: yes, no</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Agarage</p></td>
+<td><p>Defines presence of attached garage for the purposes of Hazus wind vulnerability assignments for WSF1-2, MSF1-2</p></td>
+<td><p>Choices: none, SFBC 1994, standard, weak</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Mreinf</p></td>
+<td><p>Defines presence of reinforcement in masonry walls for the purposes of Hazus wind vulnerability assignments for MSF1-2, MLRI, MLRM1, MLRM2, MMUH1-3</p></td>
+<td><p>Choices: yes, no</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>OWSJ-r</p></td>
+<td><p>Defines property of OWSJ required for Hazus wind vulnerability assignments for MSF1-2</p></td>
+<td><p>Choices: cshl, smtl</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Metal-RDA</p></td>
+<td><p>Defines Metal Roof Deck Attachment (RDA) for purposes of Hazus wind vulnerability assessments for MLRI, MERBL-M-H, MECBL-M-H, MLRM1, MLRM2, SERBL-M-H, SECBL-M-H, SPMBS-M-L and Fire Stations (HUEFFS), Elementary Schools (HUEFSS), 2-story High School (HUEFSM) and 3-story High School (HUEFSL) and Hospitals (small - HUEFHS, medium - HUEFHM, large - HUEFHL) and Police Stations (HUEFPS), Emergency Operation Centers (HUEFEO)</p></td>
+<td><p>Choices: standard, superior</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>RDage</p></td>
+<td><p>Defines roof deck age for the purposes of Hazus wind vulnerability assessments for MLRM1, MLRM2, SPMBS-M-L and Fire Stations (HUEFFS), Elementary Schools (HUEFSS)</p></td>
+<td><p>Choices: new/avg, old</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>UnitClass</p></td>
+<td><p>Defines number of units in strip mall for purposes of Hazus wind vulnerability assessments for MLRM2</p></td>
+<td><p>Choices: single, multi</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>JoistSpace</p></td>
+<td><p>Defines joist spacing for multi-unit strip malls for purposes of Hazus wind vulnerability assessments for MLRM2</p></td>
+<td><p>Choices: N/A, 4, 6</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>WindDebris</p></td>
+<td><p>Defines likely sources of wind debris for purpose of Hazus wind vulnerability assessments for MERBL-M-H, MECBL-M-H, MLRM1, MLRM2, SERBL-M-H, SECBL-M-H, CECBL-M-H, CERBL-M-H and Fire Stations (HUEFFS), Elementary Schools (HUEFSS), 2-story High School (HUEFSM) and 3-story High School (HUEFSL) and Hospitals (small - HUEFHS, medium - HUEFHM, large - HUEFHL) and Police Stations (HUEFPS), Emergency Operation Centers (HUEFEO)</p></td>
+<td><p>Choices: Res/Comm, Varies by Direction, Residential, None, A, B, C, D</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td><p>Note essential faclities attributes were defined as A, B, C, D which are respectively equivalent to the attributes used for non-essential classes as follows:
+A: Res/Comm
+B: Varies by Direction
+C: Residential
+D: None</p></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>WWR</p></td>
+<td><p>Defines window to wall ratio (WWR) for purpose of Hazus wind vulnerability assessments for MERBL-M-H, MECBL-M-H, SERBL-M-H, SECBL-M-H, CECBL-M-H, CERBL-M-H and Police Stations (HUEFPS), Emergency Operation Centers (HUEFEO)</p></td>
+<td><p>Choices: low, medium, high</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>TieDowns</p></td>
+<td><p>Defines use of ties to connect mobile homes to foundations per HUD guidelnes for purpose of Hazus wind vulnerability assessments for MH94HUDI-II-III, MH76HUD, MHPHUD</p></td>
+<td><p>Choices: yes, no</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Wind Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>HazusClass-IN</p></td>
+<td><p>Hazus building classes as defined for inundation (flooding)</p></td>
+<td><p>Choices: SF1XA, SF1XV, SF2XA, SF2XV, SF2BA, SF2BV, SF2SA, SF2SV, MH, APT, HOT, NURSE, RETAIL, WHOLE, SERVICE, OFFICE, BANK, HOSP, MED, REC, THEAT, GARAGE, INDH, INDL, CHEM, PROC, CONST, AGRI, RELIG, CITY, EMERG, SCHOOL</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>See rules for assignment: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1YwJDKltX7GC2djntBoX7Pj9bVSJDNcSLwuhp2nHVxHQ/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1YwJDKltX7GC2djntBoX7Pj9bVSJDNcSLwuhp2nHVxHQ/edit?usp=sharing</a></p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>HazusClass-WA</p></td>
+<td><p>Hazus building classes as defined for wave action</p></td>
+<td><p>Choices: W1, W2, W3, MC1, MC2, MC3, S1, S2, S3, MH</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>See rules for assignment: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1YwJDKltX7GC2djntBoX7Pj9bVSJDNcSLwuhp2nHVxHQ/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1YwJDKltX7GC2djntBoX7Pj9bVSJDNcSLwuhp2nHVxHQ/edit?usp=sharing</a></p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>FloodType</p></td>
+<td><p>Assignment to flood zones as defined for Hazus damage/loss descriptions</p></td>
+<td><p>Choices: Riverine/A-Zone, Coastal/A-Zone, 
+Coastal/V-Zone</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Flood Model</p></td>
+</tr>
+<tr class="row-even"><td><p>FirstFloorElev</p></td>
+<td><p>Assignment of first floor height as defined by Hazus</p></td>
+<td><p>Floating Point Number</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Flood Model</p></td>
+</tr>
+<tr class="row-odd"><td><p>PostFIRM</p></td>
+<td><p>Assignment of FIRM phasing as defined by Hazus</p></td>
+<td><p>Choices: Yes, No</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Flood Model</p></td>
+</tr>
+<tr class="row-even"><td><p>NumberofStories</p></td>
+<td><p>Initalizing number of stories for Hazus analysis</p></td>
+<td><p>integer</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Flood Model</p></td>
+</tr>
+<tr class="row-odd"><td><p>BasementType</p></td>
+<td><p>Assignement of basement type for Hazus analysis</p></td>
+<td><p>Choices: Basement, Split-Level Basement, No Basement</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Flood Model</p></td>
+</tr>
+<tr class="row-even"><td><p>OccupancyType</p></td>
+<td><p>Assignment of Occupancy type for Hazus analysis</p></td>
+<td><p>Choices: SF1XA, SF1XV, SF2XA, SF2XV, SF2BA, SF2BV, SF2SA, SF2SV, MH, APT, HOT, NURSE, RETAIL, WHOLE, SERVICE, OFFICE, BANK, HOSP, MED, REC, THEAT, GARAGE, INDH, INDL, CHEM, PROC, CONST, AGRI, RELIG, CITY, EMERG, SCHOOL</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Flood Model</p></td>
+</tr>
+<tr class="row-odd"><td><p>Duration</p></td>
+<td><p>Assignment of storm suration for Hazus Analysis</p></td>
+<td><p>Short, Long</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td><p>See rules: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1Nd2GzCmjXtbCeN74fnOZL3QB68DQ9FxSDYH-UHUauJ0/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1Nd2GzCmjXtbCeN74fnOZL3QB68DQ9FxSDYH-UHUauJ0/edit?usp=sharing</a></p></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Inundation Model</p></td>
+</tr>
+<tr class="row-even"><td><p>Wave Velocity</p></td>
+<td><p>Definition of wave velocity in ft/s for Hazus Analysis</p></td>
+<td><p>Floating Point Number</p></td>
+<td></td>
+<td><p>Augmented Data</p></td>
+<td><p>Apply Hazus Flood Rulesets</p></td>
+<td><p>See rules: <a class="reference external" href="https://docs.google.com/spreadsheets/d/1Nd2GzCmjXtbCeN74fnOZL3QB68DQ9FxSDYH-UHUauJ0/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1Nd2GzCmjXtbCeN74fnOZL3QB68DQ9FxSDYH-UHUauJ0/edit?usp=sharing</a></p></td>
+<td><p>Asset Representation</p></td>
+<td><p>Hazus Inundation Model</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="phase-ii-building-footprint">
+<h3>Phase II: Building Footprint<a class="headerlink" href="#phase-ii-building-footprint" title="Permalink to this headline">¶</a></h3>
+<p>The Atlantic County Building Inventory was populated with Footprint Data
+from the <a class="reference external" href="https://github.com/microsoft/USBuildingFootprints">Microsoft Footprint Dataset</a> .</p>
+</div>
+<div class="section" id="phase-iii-augmentation-using-image-processing">
+<h3>Phase III: Augmentation Using Image Processing<a class="headerlink" href="#phase-iii-augmentation-using-image-processing" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>A number of required attributes pertaining to externally-visible features of the building, such as</dt><dd><p>roof shape, roof slope, building</p>
+</dd>
+</dl>
+<p>elevations and the number of stories were augmented using image processing techniques.
+As roof geometry is not a standard field in MOD IV data, satellite imagery is processed to further augment
+the basic parcel data.
+The SimCenter developed application Building Recognition using Artificial Intelligence
+at Large Scales, BRAILS (<a class="reference internal" href="#wang19" id="id5"><span>[Wang19]</span></a>), is used to interpret satellite images of building roofs, which
+are collected from Google Maps.  The satellite images are labeled with shape types to form a dataset, upon
+which a Convolutional Neural Network (CNN) is trained so that it can give rapid predictions of roof types
+when given new images of roofs.  Microsoft Building Footprint data is used as the location index when
+downloading images automatically from Google Maps. While more complex roof shapes could in theory be
+classified, the current use of HAZUS damage and loss functions required the use of similitude measures to
+define each roof as an “effective” gable, hip or flat geometry. Using BRAILS, this classification was
+achieved with approximately 85% accuracy based on validation studies.</p>
+<dl class="citation">
+<dt class="label" id="njgin20"><span class="brackets">NJGIN20</span></dt>
+<dd><p>NJ Geographic Information Network, State of New Jersey, <a class="reference external" href="https://njgin.nj.gov/njgin/#!/">https://njgin.nj.gov/njgin/#!/</a></p>
+</dd>
+<dt class="label" id="wang19"><span class="brackets"><a class="fn-backref" href="#id5">Wang19</a></span></dt>
+<dd><p>Wang C. (2019), NHERI-SimCenter/SURF: v0.2.0 (Version v0.2.0). Zenodo. <a class="reference external" href="http://doi.org/10.5281/zenodo.3463676">http://doi.org/10.5281/zenodo.3463676</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, The Regents of the University of California.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '...', 'auto');
+    
+    ga('send', 'pageview');
+    </script>
+
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+<script>
+    let selectedFilters = [];
+    const images  = document.getElementsByClassName("gallery-item");
+    const filters = [...document.querySelectorAll('.filter select')];
+    const toggles = [...document.querySelectorAll('.filter input')];
+
+    var show = function (elem) {
+        elem.style.display = 'block';
+    };
+    var hide = function (elem) {
+        elem.style.display = 'none';
+    };
+    var toggleFilter =  function(el,elid) {
+        const filter = document.getElementById(elid);
+        filter.disabled = !el.checked;
+       
+        if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            filter.dispatchEvent(evt);
+        }
+        else
+            filter.fireEvent("change");
+    };
+    
+    for (const filter of filters) {
+        filter.addEventListener('change', function(event) {
+            selectedFilters = filters.map(filter => filter.disabled ? '' : filter.value).filter(Boolean);
+            console.log(selectedFilters);
+            for (const image of images) {
+                if (selectedFilters.every(filter => image.classList.contains(filter))) {
+                    show(image);
+                }
+                else {hide(image)};
+            };
+        })
+    };
+</script>
+
+
+</body>
+</html>

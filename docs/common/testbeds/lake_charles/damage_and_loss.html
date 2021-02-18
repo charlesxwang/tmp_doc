@@ -1,0 +1,605 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>4.6. Damage and Loss Estimation &mdash; Regional Resilience Determination Tool  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/css/lightbox.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/jquery-1.11.0.min.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2/js/lightbox.min.js"></script>
+        <script src="../../../_static/sphinxcontrib-images/LightBox2/lightbox2-customize/jquery-noconflict.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="4.7. Uncertainty Quantification" href="uncertainty_quantification.html" />
+    <link rel="prev" title="4.5. Response Simulation" href="response_simulation.html" />
+<script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
+<style media="screen">.vega-actions a {margin-right: 5px;}</style>
+<link href="../../../_static/css/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F2F2F2" >
+          
+<a href="https://simcenter.designsafe-ci.org/" style="margin-bottom: 0px;">
+  <img src="../../../_static/img/SimCenter-Only.png" class="logo" alt="Org-Logo" />
+</a>
+<hr style="margin: 0px;">
+
+  <a href="../../../index.html">
+
+
+
+  
+  <img src="../../../_static/RDT-Logo-grey3.png" class="logo" alt="Logo"/>
+
+</a>
+
+
+  
+  
+
+
+
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/ack.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/license.html">Copyright and License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../front-matter/abbreviations.html">Abbreviations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">User Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/installation/desktop/installation.html">1. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/usage/desktop/usage.html">2. User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/troubleshooting/desktop/troubleshooting.html">3. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/examples/desktop/examples.html">4. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user_manual/bugs.html">5. Bugs &amp; Feature Requests</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Testbeds</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sf_bay_area/index.html">1. San Francisco, CA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../atlantic_city/index.html">2. Atlantic City, NJ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../memphis/index.html">3. Memphis, TN</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">4. Lake Charles, LA</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="overview.html">4.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_description.html">4.2. Asset Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hazard_characterization.html">4.3. Hazard Characterization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="asset_representation.html">4.4. Asset Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="response_simulation.html">4.5. Response Simulation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.6. Damage and Loss Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainty_quantification.html">4.7. Uncertainty Quantification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_results.html">4.8. Sample Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="future_refinements.html">4.9. Opportunity Areas for Future Refinements</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Technical Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../technical_manual/desktop/technical_manual.html">1. Technical Manual</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Manual</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/how_to_build/desktop/how_to_build.html">1. How to Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/architecture/desktop/architecture.html">2. Software Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/how_to_extend/desktop/how_to_extend.html">3. How to Extend</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/verification/desktop/verification.html">4. Verification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/coding_style/desktop/coding_style.html">5. Coding Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer_manual/examples/desktop/examples.html">6. Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Regional Resilience Determination Tool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">4. </span>Lake Charles, LA</a> &raquo;</li>
+        
+      <li><span class="section-number">4.6. </span>Damage and Loss Estimation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/common/testbeds/lake_charles/damage_and_loss.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="damage-and-loss-estimation">
+<span id="lbl-testbed-ac-damage-and-loss"></span><h1><span class="section-number">4.6. </span>Damage and Loss Estimation<a class="headerlink" href="#damage-and-loss-estimation" title="Permalink to this headline">¶</a></h1>
+<p>The initial implementation of the hurricane testbed, which is described here, is limited to
+consideration of wind and storm surge (i.e., flood) damage and losses.
+Further, the calculation of wind effects does not require structural analysis to estimate EDPs,
+but rather adopts an approach where damage and losses are calculated directly from the wind speed.
+Similarly, the flood-induced loss calculation is based on the peak water depth.
+Damage and loss functions from the HAZUS Multi-hazard Loss Estimation Methodology (<a class="reference internal" href="#fema18a" id="id1"><span>[FEMA18a]</span></a>, <a class="reference internal" href="#fema18b" id="id2"><span>[FEMA18b]</span></a>)
+were implemented in <a class="reference external" href="https://pelicun.readthedocs.io/en/latest/">PELICUN</a> to support the damage and loss assessment.</p>
+<p>For the <strong>wind loss assessment</strong>, the HAZUS functions consist of tabular data to
+describe the fragility or expected losses as a function of peak wind speed (PWS). These
+data were used to calibrate coupled damage and loss models to estimate the damage
+state and the corresponding expected loss ratio for each building configuration in PELICUN.
+Continuous functions (Normal or Lognormal cumulative density functions) were fit to the synthetic
+data by maximizing the likelihood of the observations assuming a Binomial distribution of outcomes
+at each discrete wind speed in the HAZUS database. Only data up to 200 mph wind speeds were used
+because the substantial reduction in the number of observations introduces significant measurement
+error above that level (<a class="reference internal" href="#wind-df"><span class="std std-numref">Fig. 4.6.1</span></a>). Coupling the damage and loss models in this way ensures more realistic
+outcomes (e.g., a building with no damage cannot have total loss when the two models are coupled),
+and the parameterized models allow for more efficient storage and computations within the
+workflow.</p>
+<div class="align-center figure" id="wind-df" style="width: 100%">
+<img alt="../../../_images/wind_damage_functions.png" src="../../../_images/wind_damage_functions.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.1 </span><span class="caption-text">Fitted HAZUS wind damage functions for example building classes.</span><a class="headerlink" href="#wind-df" title="Permalink to this image">¶</a></p>
+</div>
+<p>The HAZUS damage and loss functions are grouped into five main classes by building material, with
+additional subclasses by building type. For each building class, e.g., wood single-family homes 1-2+
+stories, a collection of attributes are used to define key features of the load path and components
+(e.g., roof shape, secondary water resistance, roof deck attachment, roof-wall connection, shutters,
+garage) as well as the exposure (terrain roughness previously estimated in the Wind Hazard Model)
+to assign the corresponding fragility. A rules engine was developed using a combination of historical
+New Jersey model building codes, surveys capturing owner-driven mitigation actions (e.g., <a class="reference internal" href="#javeline19" id="id3"><span>[Javeline19]</span></a>),
+and market data to assign these attributes to each parcel based on age and
+other available building information (e.g., MOD IV data). Libraries of damage and loss functions
+associated with storm surge from the USACE and other recent studies in the literature are planned for
+future releases of PELICUN. Eventually, these damage and loss descriptions will be supplemented
+with more advanced models as the testbed is progressively refined to include component-based
+fragilities and fault-trees that capture cascading damage sequences resulting from breaches of the
+building envelope.</p>
+<p>The <strong>total loss</strong> from wind is estimated by the “wind-only”
+losses.</p>
+<p>However,  it is nonetheless clear that neither wind nor storm surge damages are
+uniformly and randomly distributed throughout a structure. Wind damage is most
+frequently initiated at the roof and fenestrations (i.e., windows,
+doors, or other openings in the building envelope), whereas flood damage is most
+frequently initiated at the lowest elevations of the structure (e.g., basement or first
+finished floor) and progresses upward through the structure as the depth of flooding
+increases. HAZUS used an approach for incorporating the non-uniformity of
+wind and flood damage into the combined loss methodology, which is based on
+allocating wind and flood losses to building <em>sub-assemblies</em> as a function of the building
+type and the overall wind-only and flood-only loss estimate.</p>
+<p>This so-called building sub-assembly approach can more accurately apply the combination calculation above
+to each sub-assembly instead of applying it to the entire building. Specifically, HAZUS groups the loss
+components into a consistent set of building sub-assemblies:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt>HAZUS building sub-assemblies (<a class="reference internal" href="#fema18a" id="id4"><span>[FEMA18a]</span></a>):</dt><dd><ol class="arabic simple">
+<li><p>Foundation: Includes site work, footings, and walls, slabs, piers or piles.</p></li>
+<li><p>Below First Floor: Items other than the foundation that are located below the first floor of the structure such as mechanical equipment, stairways, parking pads, break away flood walls, etc.</p></li>
+<li><p>Structure Framing: Includes all of the main load carrying structural members of the building below the roof framing and above the foundation.</p></li>
+<li><p>Roof Covering: Includes the roof membrane material and flashing.</p></li>
+<li><p>Roof Framing: Includes trusses, rafters, and sheathing.</p></li>
+<li><p>Exterior Walls: Includes wall covering, windows, exterior doors, and insulation.</p></li>
+<li><p>Interiors: Includes interior wall and floor framing, drywall, paint, interior trim, floor coverings, cabinets, counters, mechanical, and electrical</p></li>
+</ol>
+</dd>
+</dl>
+</div>
+<p>The following shows a sensitivity study of building attributes.</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-number">Table 4.6.1 </span><span class="caption-text">Year Built</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-default" id="id6">
+<img alt="../../../_images/ExpectedLossRatio_wind.png" src="../../../_images/ExpectedLossRatio_wind.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.2 </span><span class="caption-text">1975</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id7">
+<img alt="../../../_images/ExpectedLossRatio_wind1.png" src="../../../_images/ExpectedLossRatio_wind1.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.3 </span><span class="caption-text">1985</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id8">
+<img alt="../../../_images/ExpectedLossRatio_wind2.png" src="../../../_images/ExpectedLossRatio_wind2.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.4 </span><span class="caption-text">1995</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id9">
+<img alt="../../../_images/ExpectedLossRatio_wind3.png" src="../../../_images/ExpectedLossRatio_wind3.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.5 </span><span class="caption-text">2005</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id10">
+<img alt="../../../_images/ExpectedLossRatio_wind4.png" src="../../../_images/ExpectedLossRatio_wind4.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.6 </span><span class="caption-text">2015</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-default" id="id11">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist.png" src="../../../_images/ExpectedLossRatio_wind_hist.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.7 </span><span class="caption-text">1975</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id12">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist1.png" src="../../../_images/ExpectedLossRatio_wind_hist1.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.8 </span><span class="caption-text">1985</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id13">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist2.png" src="../../../_images/ExpectedLossRatio_wind_hist2.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.9 </span><span class="caption-text">1995</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id14">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist3.png" src="../../../_images/ExpectedLossRatio_wind_hist3.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.10 </span><span class="caption-text">2005</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id15">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist4.png" src="../../../_images/ExpectedLossRatio_wind_hist4.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.11 </span><span class="caption-text">2015</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-number">Table 4.6.2 </span><span class="caption-text">Number of stories, roof height, roof slope, garage</span><a class="headerlink" href="#id16" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><div class="figure align-default" id="id17">
+<img alt="../../../_images/ExpectedLossRatio_wind5.png" src="../../../_images/ExpectedLossRatio_wind5.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.12 </span><span class="caption-text">Stories=1, RoofHeight=12, RoofSlope=0, Garage=0.0</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id18">
+<img alt="../../../_images/ExpectedLossRatio_wind6.png" src="../../../_images/ExpectedLossRatio_wind6.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.13 </span><span class="caption-text">Stories=1, RoofHeight=12, RoofSlope=0, Garage=1.1</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id19">
+<img alt="../../../_images/ExpectedLossRatio_wind7.png" src="../../../_images/ExpectedLossRatio_wind7.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.14 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.33, Garage=0.0</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id20">
+<img alt="../../../_images/ExpectedLossRatio_wind8.png" src="../../../_images/ExpectedLossRatio_wind8.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.15 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.33, Garage=1.1</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id21">
+<img alt="../../../_images/ExpectedLossRatio_wind9.png" src="../../../_images/ExpectedLossRatio_wind9.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.16 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.67, Garage=0.0</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id22">
+<img alt="../../../_images/ExpectedLossRatio_wind10.png" src="../../../_images/ExpectedLossRatio_wind10.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.17 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.67, Garage=1.1</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-default" id="id23">
+<img alt="../../../_images/ExpectedLossRatio_wind11.png" src="../../../_images/ExpectedLossRatio_wind11.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.18 </span><span class="caption-text">Stories=2, RoofHeight=24, RoofSlope=0, Garage=0.0</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id24">
+<img alt="../../../_images/ExpectedLossRatio_wind12.png" src="../../../_images/ExpectedLossRatio_wind12.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.19 </span><span class="caption-text">Stories=2, RoofHeight=24, RoofSlope=0, Garage=1.1</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id25">
+<img alt="../../../_images/ExpectedLossRatio_wind13.png" src="../../../_images/ExpectedLossRatio_wind13.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.20 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.33, Garage=0.0</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id26">
+<img alt="../../../_images/ExpectedLossRatio_wind14.png" src="../../../_images/ExpectedLossRatio_wind14.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.21 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.33, Garage=1.1</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id27">
+<img alt="../../../_images/ExpectedLossRatio_wind15.png" src="../../../_images/ExpectedLossRatio_wind15.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.22 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.67, Garage=0.0</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id28">
+<img alt="../../../_images/ExpectedLossRatio_wind16.png" src="../../../_images/ExpectedLossRatio_wind16.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.23 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.67, Garage=1.1</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><div class="figure align-default" id="id29">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist5.png" src="../../../_images/ExpectedLossRatio_wind_hist5.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.24 </span><span class="caption-text">Stories=1, RoofHeight=12, RoofSlope=0, Garage=0.0</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id30">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist6.png" src="../../../_images/ExpectedLossRatio_wind_hist6.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.25 </span><span class="caption-text">Stories=1, RoofHeight=12, RoofSlope=0, Garage=1.1</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id31">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist7.png" src="../../../_images/ExpectedLossRatio_wind_hist7.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.26 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.33, Garage=0.0</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id32">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist8.png" src="../../../_images/ExpectedLossRatio_wind_hist8.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.27 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.33, Garage=1.1</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id33">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist9.png" src="../../../_images/ExpectedLossRatio_wind_hist9.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.28 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.67, Garage=0.0</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id34">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist10.png" src="../../../_images/ExpectedLossRatio_wind_hist10.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.29 </span><span class="caption-text">Stories=1, RoofHeight=18, RoofSlope=0.67, Garage=1.1</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><div class="figure align-default" id="id35">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist11.png" src="../../../_images/ExpectedLossRatio_wind_hist11.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.30 </span><span class="caption-text">Stories=2, RoofHeight=24, RoofSlope=0, Garage=0.0</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id36">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist12.png" src="../../../_images/ExpectedLossRatio_wind_hist12.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.31 </span><span class="caption-text">Stories=2, RoofHeight=24, RoofSlope=0, Garage=1.1</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id37">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist13.png" src="../../../_images/ExpectedLossRatio_wind_hist13.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.32 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.33, Garage=0.0</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id38">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist14.png" src="../../../_images/ExpectedLossRatio_wind_hist14.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.33 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.33, Garage=1.1</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id39">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist15.png" src="../../../_images/ExpectedLossRatio_wind_hist15.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.34 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.67, Garage=0.0</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+<td><div class="figure align-default" id="id40">
+<img alt="../../../_images/ExpectedLossRatio_wind_hist16.png" src="../../../_images/ExpectedLossRatio_wind_hist16.png" />
+<p class="caption"><span class="caption-number">Fig. 4.6.35 </span><span class="caption-text">Stories=2, RoofHeight=30, RoofSlope=0.67, Garage=1.1</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="citation">
+<dt class="label" id="fema18a"><span class="brackets">FEMA18a</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p>FEMA (2018), HAZUS – Multi-hazard Loss Estimation Methodology 2.1, Hurricane Model Technical Manual, Federal Emergency Management Agency, Washington D.C., 718p.</p>
+</dd>
+<dt class="label" id="fema18b"><span class="brackets"><a class="fn-backref" href="#id2">FEMA18b</a></span></dt>
+<dd><p>FEMA (2018), HAZUS – Multi-hazard Loss Estimation Methodology 2.1, Flood Model Technical Manual, Federal Emergency Management Agency, Washington D.C., 569p.</p>
+</dd>
+<dt class="label" id="javeline19"><span class="brackets"><a class="fn-backref" href="#id3">Javeline19</a></span></dt>
+<dd><p>Javeline, D. and Kijewski-Correa, T. (2019) “Coastal Homeowners in a Changing Climate,” Climatic Change. 152(2), 259-276 <a class="reference external" href="https://doi.org/10.1007/s10584-018-2257-4">https://doi.org/10.1007/s10584-018-2257-4</a></p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, The Regents of the University of California.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '...', 'auto');
+    
+    ga('send', 'pageview');
+    </script>
+
+    
+    
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+<script>
+    let selectedFilters = [];
+    const images  = document.getElementsByClassName("gallery-item");
+    const filters = [...document.querySelectorAll('.filter select')];
+    const toggles = [...document.querySelectorAll('.filter input')];
+
+    var show = function (elem) {
+        elem.style.display = 'block';
+    };
+    var hide = function (elem) {
+        elem.style.display = 'none';
+    };
+    var toggleFilter =  function(el,elid) {
+        const filter = document.getElementById(elid);
+        filter.disabled = !el.checked;
+       
+        if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            filter.dispatchEvent(evt);
+        }
+        else
+            filter.fireEvent("change");
+    };
+    
+    for (const filter of filters) {
+        filter.addEventListener('change', function(event) {
+            selectedFilters = filters.map(filter => filter.disabled ? '' : filter.value).filter(Boolean);
+            console.log(selectedFilters);
+            for (const image of images) {
+                if (selectedFilters.every(filter => image.classList.contains(filter))) {
+                    show(image);
+                }
+                else {hide(image)};
+            };
+        })
+    };
+</script>
+
+
+</body>
+</html>
